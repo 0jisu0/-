@@ -1,0 +1,3489 @@
+<html class="device-type-pc device-version-93 os-Windows os-10 no-handy"><head>
+		<title>코로나19 정보관리시스템</title>
+		
+
+
+
+
+
+
+
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" type="image/x-icon" href="/static/assets/images/favicon.png">
+<link rel="stylesheet" href="/static/css/mCustomScrollbar.min.css">
+<link rel="stylesheet" href="/static/css/visitor.css">
+<script src="/static/libs/js/jquery.min.js"></script>
+<script src="/static/js/mCustomScrollbar.min.js"></script>
+<script src="/static/js/front/fes/fes.object.js"></script>
+<script src="/static/js/front/fes/fes.core.js"></script>
+<script src="/static/js/front/fes/fes.md.js"></script>
+<script src="/static/js/front/vendor/gsap.min.js"></script>
+<script src="/static/js/front/vendor/jquery.resize.js"></script>
+<script src="/static/js/front/vendor/lodash.2.4.1.js"></script>
+<script src="/static/js/front/vendor/toggle.js"></script>
+<script src="/static/js/front/vendor/selectstyle.js"></script>
+<script src="/static/js/front/vendor/modal.js"></script>
+<script src="/static/js/front/vendor/step-section.js"></script>
+<script src="/static/js/front/visitor.js"></script>
+<script src="/static/js/common.js?v=1631375694718"></script>
+	<style type="text/css">@keyframes resizeanim { from { opacity: 0; } to { opacity: 0; } } .resize-triggers { animation: 1ms resizeanim; visibility: hidden; opacity: 0; } .resize-triggers, .resize-triggers > div, .contract-trigger:before { content: " "; display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; } .resize-triggers > div { background: #eee; overflow: auto; } .contract-trigger:before { width: 200%; height: 200%; }</style></head>
+	<body style="margin-top: 0px; padding-right: 0px;" class="">
+	    
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/static/js/qr/qrcode.min.js"></script>
+<div class="wrapper">
+	<div class="container">
+		<main class="content" id="form">
+			<div class="step" data-js="step-section">
+				<div class="step-header step-header--left">
+					<p class="step-info__tit" data-js="step-section__label">전자문진표 작성</p>
+					<div class="step-lang" data-js="toggle__wrapper">
+						<button type="button" class="step-lang__anchor" data-js="toggle" aria-controls="uiToggle-1"><span class="screen--out">언어선택</span></button>
+						<div class="step-lang__panel" data-js="toggle__panel" id="uiToggle-1">
+							
+								
+									<button type="button" class="step-lang__btn" value="en"><span>English</span></button>
+									<!-- button type="button" class="step-lang__btn" value="cn"><span>中文</span></button -->
+									<button type="button" class="step-lang__btn step-lang__btn--selected" value="ko"><span>한국어</span></button>
+								
+								
+								
+							
+						</div>
+					</div>
+				</div>
+				
+				<div class="step-info">
+					<ol class="step-info__list">
+						<li class="step-info__item is-pass" data-js="step-section__anchor">
+							<span class="step-info__num">1</span>
+							<span class="step-info__name">개인정보</span>
+						</li>
+						<li class="step-info__item is-active" data-js="step-section__anchor">
+							<span class="step-info__num">2</span>
+							<span class="step-info__name">증상/기타정보</span>
+						</li>
+					</ol>
+				</div>
+				<div class="step-content" style="width: 751px;">
+					<div class="step-panels" data-js="step-section__content">
+						<section class="step-panels__panel" data-js="step-section__panel" data-panel-label="전자문진표 작성" style="width: 751px;">
+							<div class="t-form">
+								<div class="t-form__row">
+									<div class="sec-header">
+										<h2>검사경위</h2><span class="required">*</span> <!-- 검사 경위 -->
+									</div>
+									<div class="t-radio-group t-radio-group--button">
+										<div class="t-radio"><!-- 본인 판단 -->
+											<input type="radio" name="testPurpose" id="testPurpose_1" value="71" checked="">
+											<label for="testPurpose_1"><span>본인판단</span></label>
+										</div>
+										<div class="t-radio"><!-- 자가 격리 -->
+											<input type="radio" name="testPurpose" id="testPurpose_2" value="72">
+											<label for="testPurpose_2"><span>자가격리</span></label>
+										</div>
+										<div class="t-radio"><!-- 자가격리 해제전 -->
+											<input type="radio" name="testPurpose" id="testPurpose_3" value="73">
+											<label for="testPurpose_3"><span>자가격리<br>해제 전</span></label>
+										</div>
+										<div class="t-radio"><!-- 유증상자 -->
+											<input type="radio" name="testPurpose" id="testPurpose_4" value="74">
+											<label for="testPurpose_4"><span>유증상자</span></label>
+										</div>
+									</div>
+									<div class="t-radio-group t-radio-group--button mgt10">
+										<div class="t-radio"><!-- 보건소 연락 재난문자 -->
+											<input type="radio" name="testPurpose" id="testPurpose_5" value="75">
+											<label for="testPurpose_5"><span>보건소연락<br>재난문자</span></label>
+										</div>
+										<div class="t-radio"><!-- 해외입국자 -->
+											<input type="radio" name="testPurpose" id="testPurpose_6" value="10">
+											<label for="testPurpose_6"><span>해외입국자</span></label>
+										</div>
+										<div class="t-radio"><!-- 해외입국자 접촉 -->
+											<input type="radio" name="testPurpose" id="testPurpose_7" value="20">
+											<label for="testPurpose_7"><span>해외입국자 접촉</span></label>
+										</div>
+									</div>
+									<div class="t-radio-group t-radio-group--button mgt10">
+										<div class="t-radio"><!-- 지역집단발생 -->
+											<input type="radio" name="testPurpose" id="testPurpose_8" value="50">
+											<label for="testPurpose_8"><span>집단발생지 방문</span></label>
+										</div>
+										<div class="t-radio"><!-- 확진자 접촉 -->
+											<input type="radio" name="testPurpose" id="testPurpose_9" value="60">
+											<label for="testPurpose_9"><span>확진자접촉</span></label>
+										</div>
+										<div class="t-radio"><!-- 선제검사 -->
+											<input type="radio" name="testPurpose" id="testPurpose_10" value="79">
+											<label for="testPurpose_10"><span>선제검사</span></label>
+										</div>
+									</div>
+								</div>
+								<div class="t-form__row" hidden="true" id="personalType">
+									<div class="sec-header">
+										<h2>대상유형 선택</h2><span class="required">*</span>
+									</div>
+									<div class="o-combobox" data-js="o-combobox">
+										<select name="trgetSn" id="trgetSn">
+										
+										<option value="1">요양병원</option><option value="2">정신병원</option><option value="3">요양시설</option><option value="4">정신요양/재활시설</option><option value="5">양로시설</option><option value="6">장애인거주시설</option><option value="7">노숙인시설</option><option value="8">한방병원</option><option value="9">재활병원</option><option value="10">외국인보호시설종사자(화성,청주,여수외)</option><option value="11">외국인보호시설보호외국인(화성,청주,여수외)</option><option value="12">보육교직원</option><option value="13">콜센터종사자</option><option value="14">청소년복지시설종사자</option><option value="15">청소년복지시설입소자</option><option value="16">여성피해자보호시설종사자</option><option value="17">아이돌보미</option><option value="18">노인일자리기관종사자</option><option value="19">노인복지기관 종사자</option><option value="20">노인맞춤돌봄서비스 수행기관종사자</option><option value="42">학원·교습소 종사자</option><option value="43">대구-재활병원 종사자</option><option value="44">2학기 기숙사 입소학생</option><option value="45">교원양성기관 학교현장실습 학생</option><option value="46">아동복지시설 종사자</option><option value="47">도축장 종사자</option></select>
+									</div>
+									
+									<!-- <div class="o-combobox" data-js="o-combobox">
+										<select name="personalTypeBox" id="personalTypeBox">  
+										</select>
+									</div> --> 
+								</div>
+								<div class="t-form__row"> <!-- 주민등록번호/외국인번호 -->
+									<div class="sec-header">
+										<h2>주민/외국인등록번호</h2><span class="required">*</span>
+										<span>
+											<input type="checkbox" id="personalCheck" oncopy="return false" oncut="return false" onpaste="return false">
+											없음
+										</span>
+									</div>
+									<div class="t-input">
+										<input type="text" class="text_only_number" id="personalId" maxlength="14" data-checkrequired="">
+									</div>									
+								</div>
+								<div class="t-form__row"> <!-- 이름 -->
+									<div class="sec-header">
+										<h2>이름</h2><span class="required">*</span>
+										<span style="color:red;">(숫자, 특수문자 입력불가)</span>
+									</div>
+									<div class="t-input">
+										<input type="text" id="name" maxlength="50" data-checkrequired="">
+									</div>
+								</div>
+								<div class="t-form__row"><!-- 생년월일 -->
+									<div class="sec-header">
+										<h2>생년월일</h2><span class="required">*</span>
+									</div>
+									<div class="t-input">
+										<input type="text" class="text_only_number" id="birthday" placeholder="YYYYMMDD" maxlength="8" data-checkrequired="">
+									</div>
+								</div>
+								<div class="t-form__row"><!-- 성별 -->
+									<div class="sec-header">
+										<h2>성별</h2><span class="required">*</span>
+									</div>
+									<div class="t-radio-group t-radio-group--button">
+										<div class="t-radio">
+											<input type="radio" name="sexdstnCd" id="sexdstnCd_1" value="1" checked="">
+											<label for="sexdstnCd_1"><span>남</span></label>
+										</div>
+										<div class="t-radio">
+											<input type="radio" name="sexdstnCd" id="sexdstnCd_2" value="2">
+											<label for="sexdstnCd_2"><span>여</span></label>
+										</div>
+									</div>
+								</div>
+								<div class="t-form__row" id="pregDom" hidden="true" style="display: block;"> <!-- 임신여부 -->
+									<div class="sec-header">
+										<h2>임신여부</h2><span class="required">*</span>
+									</div>
+									<div class="t-radio-group t-radio-group--button">
+										<div class="t-radio">
+											<input type="radio" name="pregStCd" id="pregStCd_1" value="1">
+											<label for="pregStCd_1"><span>예</span></label>
+										</div>
+										<div class="t-radio">
+											<input type="radio" name="pregStCd" id="pregStCd_2" value="2" checked="">
+											<label for="pregStCd_2"><span>아니오</span></label>
+										</div>
+									</div>
+								</div>
+								<div class="t-form__row"><!-- 국적 -->
+									<div class="sec-header">
+										<h2>국적</h2><span class="required">*</span>
+									</div>
+									<div class="rdo-tab" data-js="rdo-toggle">
+										<div class="t-radio-group t-radio-group--button">
+											<div class="t-radio">
+												<input type="radio" name="foreignerYn" id="in" value="N" checked="checked" data-js="rdo-toggle__rdo">
+												<label for="in"><span>내국인</span></label>
+											</div>
+											<div class="t-radio">
+												<input type="radio" name="foreignerYn" id="out" value="Y" data-js="rdo-toggle__rdo" data-target="rdo-panel__out">
+												<label for="out"><span>Foreigner</span></label>
+											</div>
+										</div>
+										<div class="rdo-tab__panel" id="foreignerSelect" data-js="rdo-toggle__panel" data-id="rdo-panel__out">
+											<div class="toggle-select " data-js="toggle-select" data-max-height="200">
+												<button type="button" data-js="toggle-select__anchor" class="toggle-select__anchor" aria-controls="uiToggle-0">
+													<span>Select your country</span>
+												</button>
+												<div data-js="toggle-select__panel" class="toggle-select__panel" id="uiToggle-0">
+													<input type="hidden" id="countryCd" data-js="toggle-select__search-value" disabled="">
+													<input type="text" class="toggle-select__search-input" data-js="toggle-select__search-input" placeholder="Search">
+													<div class="toggle-select__scroll" data-js="toggle-select__scroll" data-empty="검색결과가 없습니다." style="max-height: 200px;">
+														<ul id="ul_country">
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="AD" data-region-name="안도라">
+														    		<span>Andorra(안도라)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="AE" data-region-name="아랍에미리트">
+														    		<span>United Arab Emirates(아랍에미리트)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="AF" data-region-name="아프가니스탄">
+														    		<span>Afghanistan(아프가니스탄)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="AG" data-region-name="앤티가 바부다">
+														    		<span>Antigua and Barbuda(앤티가 바부다)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="AI" data-region-name="안길라">
+														    		<span>Anguilla(안길라)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="AL" data-region-name="알바니아">
+														    		<span>Albania(알바니아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="AM" data-region-name="아르메니아">
+														    		<span>Armenia(아르메니아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="AN" data-region-name="네덜란드령 안틸레스">
+														    		<span>Nederlandse Antillen(네덜란드령 안틸레스)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="AO" data-region-name="앙골라">
+														    		<span>Angola(앙골라)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="AQ" data-region-name="남극">
+														    		<span>Antarctica(남극)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="AR" data-region-name="아르헨티나">
+														    		<span>Argentina(아르헨티나)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="AS" data-region-name="미국령 사모아">
+														    		<span>American Samoa(미국령 사모아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="AT" data-region-name="오스트리아">
+														    		<span>Austria(오스트리아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="AU" data-region-name="오스트레일리아">
+														    		<span>Australia(오스트레일리아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="AW" data-region-name="아루바">
+														    		<span>Aruba(아루바)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="AZ" data-region-name="아제르바이잔">
+														    		<span>Azerbaijan(아제르바이잔)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BA" data-region-name="보스니아·헤르체고비나">
+														    		<span>Bosnia and Herzegovina(보스니아·헤르체고비나)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BB" data-region-name="바베이도스">
+														    		<span>Barbados(바베이도스)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BD" data-region-name="방글라데시">
+														    		<span>Bangladesh(방글라데시)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BE" data-region-name="벨기에">
+														    		<span>Belgium(벨기에)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BF" data-region-name="부르키나 파소">
+														    		<span>Burkina Faso(부르키나 파소)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BG" data-region-name="불가리아">
+														    		<span>Bulgaria(불가리아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BH" data-region-name="바레인">
+														    		<span>Bahrain(바레인)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BI" data-region-name="부룬디">
+														    		<span>Burundi(부룬디)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BJ" data-region-name="베냉">
+														    		<span>Benin(베냉)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BM" data-region-name="버뮤다">
+														    		<span>Bermuda(버뮤다)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BN" data-region-name="브루나이">
+														    		<span>Brunei Darussalam(브루나이)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BO" data-region-name="볼리비아">
+														    		<span>Bolivia (Plurinational State of)(볼리비아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BR" data-region-name="브라질">
+														    		<span>Brazil(브라질)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BS" data-region-name="바하마">
+														    		<span>Bahamas(바하마)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BT" data-region-name="부탄">
+														    		<span>Bhutan(부탄)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BV" data-region-name="부베도">
+														    		<span>Bouvet Island(부베도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BW" data-region-name="보츠와나">
+														    		<span>Botswana(보츠와나)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BY" data-region-name="벨라루스">
+														    		<span>Belarus(벨라루스)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="BZ" data-region-name="벨리즈">
+														    		<span>Belize(벨리즈)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="CA" data-region-name="캐나다">
+														    		<span>Canada(캐나다)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="CC" data-region-name="코코스군도">
+														    		<span>Cocos (Keeling) Islands(코코스군도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="CF" data-region-name="중앙아프리카공화국">
+														    		<span>Central African Republic(중앙아프리카공화국)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="CG" data-region-name="콩고">
+														    		<span>Congo(콩고)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="CH" data-region-name="스위스">
+														    		<span>Switzerland(스위스)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="CI" data-region-name="코트디브아르">
+														    		<span>Côte d'Ivoire(코트디브아르)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="CK" data-region-name="쿠크군도">
+														    		<span>Cook Islands(쿠크군도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="CL" data-region-name="칠레">
+														    		<span>Chile(칠레)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="CM" data-region-name="카메룬">
+														    		<span>Cameroon(카메룬)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="CN" data-region-name="중국">
+														    		<span>China(중국)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="CO" data-region-name="콜롬비아">
+														    		<span>Colombia(콜롬비아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="CR" data-region-name="코스타리카">
+														    		<span>Costa Rica(코스타리카)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="CU" data-region-name="쿠바">
+														    		<span>Cuba(쿠바)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="CV" data-region-name="카보베르데">
+														    		<span>Cabo Verde(카보베르데)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="CX" data-region-name="크리스마스도">
+														    		<span>Christmas Island(크리스마스도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="CY" data-region-name="사이프러스">
+														    		<span>Cyprus(사이프러스)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="CZ" data-region-name="체코">
+														    		<span>Czech Republic(체코)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="DE" data-region-name="독일">
+														    		<span>Germany(독일)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="DJ" data-region-name="지부티">
+														    		<span>Djibouti(지부티)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="DK" data-region-name="덴마크">
+														    		<span>Denmark(덴마크)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="DM" data-region-name="도미니카연방">
+														    		<span>Dominica(도미니카연방)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="DO" data-region-name="도미니카 공화국">
+														    		<span>Dominican Republic(도미니카 공화국)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="DZ" data-region-name="알제리">
+														    		<span>Algeria(알제리)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="EC" data-region-name="에콰도르">
+														    		<span>Ecuador(에콰도르)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="EE" data-region-name="에스토니아">
+														    		<span>Estonia(에스토니아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="EG" data-region-name="이집트">
+														    		<span>Egypt(이집트)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="EH" data-region-name="서사하라">
+														    		<span>Western Sahara(서사하라)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="ER" data-region-name="에리트리아">
+														    		<span>Eritrea(에리트리아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="ES" data-region-name="스페인">
+														    		<span>Spain(스페인)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="ET" data-region-name="에티오피아">
+														    		<span>Ethiopia(에티오피아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="FI" data-region-name="핀란드">
+														    		<span>Finland(핀란드)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="FJ" data-region-name="피지">
+														    		<span>Fiji(피지)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="FK" data-region-name="포클랜드(말비나스)군도">
+														    		<span>Falkland Islands (Malvinas)(포클랜드(말비나스)군도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="FM" data-region-name="미크로네시아">
+														    		<span>Micronesia, Federated(미크로네시아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="FO" data-region-name="파로에군도">
+														    		<span>Faroe Islands(파로에군도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="FR" data-region-name="프랑스">
+														    		<span>France(프랑스)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GA" data-region-name="가봉">
+														    		<span>Gabon(가봉)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GB" data-region-name="영국">
+														    		<span>United Kingdom(영국)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GD" data-region-name="그레나다">
+														    		<span>Grenada(그레나다)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GE" data-region-name="그루지아">
+														    		<span>Georgia(그루지아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GF" data-region-name="프랑스령 기아나">
+														    		<span>French Guiana(프랑스령 기아나)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GH" data-region-name="가나">
+														    		<span>Ghana(가나)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GI" data-region-name="지브롤터">
+														    		<span>Gibraltar(지브롤터)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GL" data-region-name="그린랜드">
+														    		<span>Greenland(그린랜드)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GM" data-region-name="감비아">
+														    		<span>Gambia(감비아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GN" data-region-name="기니">
+														    		<span>Guinea(기니)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GP" data-region-name="과달루프">
+														    		<span>Guadeloupe(과달루프)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GQ" data-region-name="적도 기니">
+														    		<span>Equatorial Guinea(적도 기니)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GR" data-region-name="그리스">
+														    		<span>Greece(그리스)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GS" data-region-name="남조지아·남샌드위치군도">
+														    		<span>South Georgia and South Sandwich Islands(남조지아·남샌드위치군도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GT" data-region-name="과테말라">
+														    		<span>Guatemala(과테말라)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GU" data-region-name="괌">
+														    		<span>Guam(괌)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GW" data-region-name="기니비사우">
+														    		<span>Guinea-Bissau(기니비사우)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="GY" data-region-name="가이아나">
+														    		<span>Guyana(가이아나)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="HK" data-region-name="홍콩">
+														    		<span>Hong Kong(홍콩)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="HM" data-region-name="헤어드도·맥도널드군도">
+														    		<span>Heard Island and McDonald Islands(헤어드도·맥도널드군도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="HN" data-region-name="온두라스">
+														    		<span>Honduras(온두라스)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="HR" data-region-name="크로아티아">
+														    		<span>Croatia(크로아티아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="HT" data-region-name="아이티">
+														    		<span>Haiti(아이티)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="HU" data-region-name="헝가리">
+														    		<span>Hungary(헝가리)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="ID" data-region-name="인도네시아">
+														    		<span>Indonesia(인도네시아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="IE" data-region-name="아일랜드">
+														    		<span>Ireland(아일랜드)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="IL" data-region-name="이스라엘">
+														    		<span>Israel(이스라엘)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="IN" data-region-name="인도">
+														    		<span>India(인도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="IO" data-region-name="영국령 인도양지역">
+														    		<span>British Indian Ocean Territory(영국령 인도양지역)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="IQ" data-region-name="이라크">
+														    		<span>Iraq(이라크)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="IR" data-region-name="이란">
+														    		<span>Iran (Islamic Republic of)(이란)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="IS" data-region-name="아이슬란드">
+														    		<span>Iceland(아이슬란드)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="IT" data-region-name="이탈리아">
+														    		<span>Italy(이탈리아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="JM" data-region-name="자메이카">
+														    		<span>Jamaica(자메이카)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="JO" data-region-name="요르단">
+														    		<span>Jordan(요르단)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="JP" data-region-name="일본">
+														    		<span>Japan(일본)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="KE" data-region-name="케냐">
+														    		<span>Kenya(케냐)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="KG" data-region-name="키르기스스탄">
+														    		<span>Kyrgyzstan(키르기스스탄)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="KH" data-region-name="캄보디아">
+														    		<span>Cambodia(캄보디아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="KI" data-region-name="키리바시">
+														    		<span>Kiribati(키리바시)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="KM" data-region-name="코모로">
+														    		<span>Comoros(코모로)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="KN" data-region-name="세인트 킷츠 네비스">
+														    		<span>Saint Kitts and Nevis(세인트 킷츠 네비스)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="KR" data-region-name="대한민국">
+														    		<span>South Korea(대한민국)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="KW" data-region-name="쿠웨이트">
+														    		<span>Kuwait(쿠웨이트)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="KY" data-region-name="케이만군도">
+														    		<span>Cayman Islands(케이만군도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="KZ" data-region-name="카자흐스탄">
+														    		<span>Kazakhstan(카자흐스탄)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="LA" data-region-name="라오스">
+														    		<span>Lao People's Democratic Republic(라오스)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="LB" data-region-name="레바논">
+														    		<span>Lebanon(레바논)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="LC" data-region-name="세인트 루치아">
+														    		<span>Saint Lucia(세인트 루치아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="LI" data-region-name="리히텐슈타인">
+														    		<span>Liechtenstein(리히텐슈타인)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="LK" data-region-name="스리랑카">
+														    		<span>Sri Lanka(스리랑카)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="LR" data-region-name="라이베리아">
+														    		<span>Liberia(라이베리아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="LS" data-region-name="레소토">
+														    		<span>Lesotho(레소토)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="LT" data-region-name="리투아니아">
+														    		<span>Lithuania(리투아니아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="LU" data-region-name="룩셈부르크">
+														    		<span>Luxembourg(룩셈부르크)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="LV" data-region-name="라트비아">
+														    		<span>Latvia(라트비아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="LY" data-region-name="리비아">
+														    		<span>Libya(리비아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MA" data-region-name="모로크">
+														    		<span>Morocco(모로크)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MC" data-region-name="모나코">
+														    		<span>Monaco(모나코)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="ME" data-region-name="몬테네그로">
+														    		<span>Montenegro(몬테네그로)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MD" data-region-name="몰도바">
+														    		<span>Moldova (the Republic of)(몰도바)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MG" data-region-name="마다가스카르">
+														    		<span>Madagascar(마다가스카르)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MH" data-region-name="마샬군도">
+														    		<span>Marshall Islands(마샬군도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="ML" data-region-name="말리">
+														    		<span>Mali(말리)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MM" data-region-name="미얀마">
+														    		<span>Myanmar(미얀마)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MN" data-region-name="몽골">
+														    		<span>Mongolia(몽골)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MO" data-region-name="마카오">
+														    		<span>Macau(마카오)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MP" data-region-name="북마리아나군도">
+														    		<span>Northern Mariana Islands(북마리아나군도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MQ" data-region-name="말티니크">
+														    		<span>Martinique(말티니크)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MR" data-region-name="모리타니">
+														    		<span>Mauritania(모리타니)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MS" data-region-name="몬트세라트">
+														    		<span>Montserrat(몬트세라트)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MT" data-region-name="몰타">
+														    		<span>Malta(몰타)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MU" data-region-name="모리셔스">
+														    		<span>Mauritius(모리셔스)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MV" data-region-name="몰디브">
+														    		<span>Maldives(몰디브)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MW" data-region-name="말라위">
+														    		<span>Malawi(말라위)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MX" data-region-name="멕시코">
+														    		<span>Mexico(멕시코)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MY" data-region-name="말레이지아">
+														    		<span>Malaysia(말레이지아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="MZ" data-region-name="모잠비크">
+														    		<span>Mozambique(모잠비크)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="NA" data-region-name="나미비아">
+														    		<span>Namibia(나미비아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="NC" data-region-name="뉴칼레도니아">
+														    		<span>New Caledonia(뉴칼레도니아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="NE" data-region-name="니제르">
+														    		<span>Niger(니제르)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="NF" data-region-name="노퍽섬">
+														    		<span>Norfolk Island(노퍽섬)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="NG" data-region-name="나이지리아">
+														    		<span>Nigeria(나이지리아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="NI" data-region-name="니카라과">
+														    		<span>Nicaragua(니카라과)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="NL" data-region-name="네덜란드">
+														    		<span>Netherlands(네덜란드)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="NO" data-region-name="노르웨이">
+														    		<span>Norway(노르웨이)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="NP" data-region-name="네팔">
+														    		<span>Nepal(네팔)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="NR" data-region-name="나우루">
+														    		<span>Nauru(나우루)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="NU" data-region-name="니우에">
+														    		<span>Niue(니우에)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="NZ" data-region-name="뉴질랜드">
+														    		<span>New Zealand(뉴질랜드)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="OM" data-region-name="오만">
+														    		<span>Oman(오만)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="PA" data-region-name="파나마">
+														    		<span>Panama(파나마)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="PE" data-region-name="페루">
+														    		<span>Peru(페루)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="PF" data-region-name="프랑스령 폴리네시아">
+														    		<span>French Polynesia(프랑스령 폴리네시아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="PG" data-region-name="파푸아뉴기니">
+														    		<span>Papua New Guinea(파푸아뉴기니)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="PH" data-region-name="필리핀">
+														    		<span>Philippines(필리핀)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="PK" data-region-name="파키스탄">
+														    		<span>Pakistan(파키스탄)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="PL" data-region-name="폴란드">
+														    		<span>Poland(폴란드)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="PM" data-region-name="세인트피에레도.미쾌론도">
+														    		<span>Saint Pierre and Miquelon(세인트피에레도.미쾌론도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="PN" data-region-name="핏카인도">
+														    		<span>Pitcairn(핏카인도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="PR" data-region-name="푸에토리코">
+														    		<span>Puerto Rico(푸에토리코)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="PS" data-region-name="팔레스타인">
+														    		<span>State of Palestine(팔레스타인)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="PT" data-region-name="포르투갈">
+														    		<span>Portugal(포르투갈)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="PW" data-region-name="팔라우">
+														    		<span>Palau(팔라우)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="PY" data-region-name="파라과이">
+														    		<span>Paraguay(파라과이)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="QA" data-region-name="카타르">
+														    		<span>Qatar(카타르)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="RE" data-region-name="리유니온">
+														    		<span>Réunion(리유니온)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="RO" data-region-name="루마니아">
+														    		<span>Romania(루마니아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="RU" data-region-name="러시아">
+														    		<span>Russia(러시아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="RW" data-region-name="르완다">
+														    		<span>Rwanda(르완다)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SA" data-region-name="사우디아라비아">
+														    		<span>Saudi Arabia(사우디아라비아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SB" data-region-name="솔로몬군도">
+														    		<span>Solomon Islands(솔로몬군도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="RS" data-region-name="세르비아">
+														    		<span>Serbia(세르비아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SC" data-region-name="세이셸">
+														    		<span>Seychelles(세이셸)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SD" data-region-name="수단">
+														    		<span>Sudan(수단)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SE" data-region-name="스웨덴">
+														    		<span>Sweden(스웨덴)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SG" data-region-name="싱가포르">
+														    		<span>Singapore(싱가포르)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SH" data-region-name="세인트헬레나">
+														    		<span>Saint Helena(세인트헬레나)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SI" data-region-name="슬로베니아">
+														    		<span>Slovenia(슬로베니아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SJ" data-region-name="스발바드·잠마엔도">
+														    		<span>Svalbard and Jan Mayen Islands(스발바드·잠마엔도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SK" data-region-name="슬로바키아">
+														    		<span>Slovakia(슬로바키아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SL" data-region-name="시에라리온">
+														    		<span>Sierra Leone(시에라리온)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SM" data-region-name="산마리노">
+														    		<span>San Marino(산마리노)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SN" data-region-name="세네갈">
+														    		<span>Senegal(세네갈)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SO" data-region-name="소말리아">
+														    		<span>Somalia(소말리아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SR" data-region-name="수리남">
+														    		<span>Suriname(수리남)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SS" data-region-name="남수단">
+														    		<span>South Sudan(남수단)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="ST" data-region-name="상투메 프린시페">
+														    		<span>Sao Tome and Principe(상투메 프린시페)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SV" data-region-name="엘살바도르">
+														    		<span>El Salvador(엘살바도르)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SY" data-region-name="시리아">
+														    		<span>Syrian Arab Republic(시리아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="SZ" data-region-name="스와질랜드">
+														    		<span>Eswatini(스와질랜드)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="TC" data-region-name="터크스·카이코스군도">
+														    		<span>Turks and Caicos Islands(터크스·카이코스군도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="TD" data-region-name="차드">
+														    		<span>Chad(차드)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="TF" data-region-name="프랑스령 극남군도">
+														    		<span>French Southern Territories(프랑스령 극남군도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="TG" data-region-name="토고">
+														    		<span>Togo(토고)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="TH" data-region-name="태국">
+														    		<span>Thailand(태국)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="TJ" data-region-name="타지키스탄">
+														    		<span>Tajikistan(타지키스탄)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="TK" data-region-name="토켈라우">
+														    		<span>Tokelau(토켈라우)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="TM" data-region-name="투르크메니스탄">
+														    		<span>Turkmenistan(투르크메니스탄)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="TN" data-region-name="튀니지">
+														    		<span>Tunisia(튀니지)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="TO" data-region-name="통가">
+														    		<span>Tonga(통가)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="TP" data-region-name="동티모">
+														    		<span>Timor-Leste(동티모)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="TR" data-region-name="터키">
+														    		<span>Turkey(터키)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="TT" data-region-name="트리니다드·토바고">
+														    		<span>Trinidad and Tobago(트리니다드·토바고)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="TV" data-region-name="투발루">
+														    		<span>Tuvalu(투발루)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="TW" data-region-name="대만">
+														    		<span>Taiwan (Province of China)(대만)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="TZ" data-region-name="탄자니아">
+														    		<span>Tanzania, United Republic of(탄자니아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="UA" data-region-name="우크라이나">
+														    		<span>Ukraine(우크라이나)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="UG" data-region-name="우간다">
+														    		<span>Uganda(우간다)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="UM" data-region-name="미국령 태평양군도">
+														    		<span>United States Minor Outlying Islands(미국령 태평양군도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="US" data-region-name="미국">
+														    		<span>United States of America(미국)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="UY" data-region-name="우르과이">
+														    		<span>Uruguay(우르과이)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="UZ" data-region-name="우즈베키스탄">
+														    		<span>Uzbekistan(우즈베키스탄)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="VA" data-region-name="바티칸">
+														    		<span>Holy See(바티칸)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="VC" data-region-name="세인트 빈센트 그레나딘">
+														    		<span>Saint Vincent and Grenadines(세인트 빈센트 그레나딘)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="VE" data-region-name="베네수엘라">
+														    		<span>Venezuela (Bolivarian Republic of)(베네수엘라)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="VG" data-region-name="영국령 버진군도">
+														    		<span>Virgin Islands (British)(영국령 버진군도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="VI" data-region-name="미국령 버진군도">
+														    		<span>Virgin Islands (U.S.)(미국령 버진군도)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="VN" data-region-name="베트남">
+														    		<span>Viet Nam(베트남)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="VU" data-region-name="바누아투">
+														    		<span>Vanuatu(바누아투)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="WF" data-region-name="월리스·후트나">
+														    		<span>Wallis and Futuna(월리스·후트나)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="WS" data-region-name="서사모아">
+														    		<span>Samoa(서사모아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="YE" data-region-name="예멘">
+														    		<span>Yemen(예멘)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="YT" data-region-name="마요티">
+														    		<span>Mayotte(마요티)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="ZA" data-region-name="남아프리카공화국">
+														    		<span>South Africa(남아프리카공화국)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="ZM" data-region-name="잠비아">
+														    		<span>Zambia(잠비아)</span>
+														    	</button>
+															</li>
+														
+															<li data-js="toggle-select__select-item">
+														    	<button type="button" data-js="toggle-select__select-btn" class="toggle-select__select-btn" value="ZW" data-region-name="짐바브웨">
+														    		<span>Zimbabwe(짐바브웨)</span>
+														    	</button>
+															</li>
+														
+														</ul>
+													<p class="toggle-select__empty" data-js="toggle-select__empty" style="display:none;">검색결과가 없습니다.</p></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="t-form__row"><!-- 핸드폰번호 -->
+									<div class="sec-header">
+										<h2>휴대폰번호</h2><span class="required">*</span>
+									</div>
+									<div class="t-input">
+										<input type="text" class="text_mobile_number" id="mobile" maxlength="13" data-checkrequired="">
+									</div>
+								</div>
+								<div class="t-form__row" id="addrDom"><!-- 주소 -->
+									<div class="sec-header">
+										<h2>실거주지 주소</h2><span class="required">*</span>
+									</div>
+									<div class="t-form__flex">
+										<div class="t-input">
+											<input type="text" id="patntRnZip" data-checkrequired="" readonly="">
+										</div>
+										<div class="cta-wrap">
+											<button type="button" class="cta cta--t-address" id="btnZipCode">검색</button>
+										</div>
+									</div>
+									<div class="t-form__flex">
+										<div class="t-input">
+											<input type="text" id="patntRdnmadr" readonly="">
+										</div>
+									</div>
+									<div class="t-form__flex">
+										<div class="t-input">
+											<input type="text" id="patntRdnmadrDtl" maxlength="50" placeholder="상세주소를 입력하세요.">
+		                                    <input type="hidden" id="patntEmdCd" value="1168010600">
+										 	<input type="hidden" id="patntBuldManageno" value="1168010600109610015012796">
+		                                    <input type="hidden" id="roadAddrPart2" value="(대치동)">
+										</div>
+									</div>
+								</div>
+								<div class="t-form__row" id="occup"> <!-- 직업 -->
+									<div class="sec-header">
+										<h2>직업</h2><span class="required">*</span>
+									</div>
+									<div class="t-form__flex">
+										<div class="o-combobox" data-js="o-combobox">
+											<select name="patntOccpCd" id="patntOccpCd" data-checkrequired="">
+												<option value="">선택</option>
+												<option value="0">의회의원,고위임직원 및 관리자</option>
+												<option value="1">전문가</option>
+												<option value="2">기술공 및 준전문가</option>
+												<option value="3">사무종사자</option>
+												<option value="4">서비스종사자</option>
+												<option value="5">판매종사자</option>
+												<option value="6">농업 및 어업숙련 종사자</option>
+												<option value="7">기능원 및 기능관련 종사자</option>
+												<option value="8">장치,기계조작 및 조립종사자</option>
+												<option value="9">단순노무 종사자</option>
+												<option value="A">군인</option>
+												<option value="B">(전업)주부</option>
+												<option value="C">학생</option>
+												<option value="D">무직</option>
+												<option value="Z">기타</option>
+											</select>
+										</div>
+									</div>
+									<div class="t-form__flex">
+										<div class="t-input">
+											<input type="text" id="occpDtlInfo" maxlength="50" placeholder="상세직업을 입력하세요.">
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							<div class="step-panels__fotter">
+								<div class="cta-wrap">
+									<div class="cta-wrap__col">
+										<button type="button" data-js="step-next" class="cta cta--confirm"> 다음  </button>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="step-panels__panel is-active" data-js="step-section__panel" data-panel-label="전자문진표 작성" style="width: 751px;">
+							<div class="t-form">
+								<div class="t-form__row"><!-- 질병 -->
+									<div class="sec-header">
+										<h2>의심 감염병을 선택해주세요.</h2><span class="required">*</span>
+									</div>
+									<div class="o-combobox" data-js="o-combobox">
+										<select id="diseaseId">
+											<option value="NA0012">코로나19</option>
+										</select>
+									</div>
+								</div>
+								<div class="t-form__row"><!-- 온도 -->
+									<div class="sec-header">
+										<h2>발열이 있으신가요?</h2>
+									</div>
+									<div class="rdo-tab" data-js="rdo-toggle">
+										<div class="t-radio-group t-radio-group--button">
+											<div class="t-radio">
+												<input type="radio" name="feverYn" id="fever_y" data-js="rdo-toggle__rdo" data-target="rdo-panel__fever-y" value="Y">
+												<label for="fever_y"><span>예</span></label>
+											</div>
+											<div class="t-radio">
+												<input type="radio" name="feverYn" id="fever_n" data-js="rdo-toggle__rdo" data-target="rdo-panel__fever-n" value="N" checked="">
+												<label for="fever_n"><span>아니오</span></label>
+											</div>
+										</div>
+										<div class="rdo-tab__panel" data-js="rdo-toggle__panel" data-id="rdo-panel__fever-y">
+											<div class="t-form__row">
+												<div class="sec-header">
+													<h2>발열 온도가 몇 도인 가요?</h2>
+												</div>
+												<div class="t-form__flex">
+													<div class="t-input">
+														<input type="number" class="text_float text_body_temp" id="feverTemperature" placeholder="발열온도를 입력하세요.">
+														<div class="t-input__aside"> ℃  </div>
+													</div>
+												</div>
+												<div class="t-form__flex">
+													<div class="o-checkbox">
+														<input type="checkbox" id="checkFeverUnknown" value="Y">
+														<label for="checkFeverUnknown">
+															<span>잘 모릅니다.</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="t-form__row">
+												<div class="sec-header">
+													<h2>며칠 동안 발열이 지속됐나요?</h2>
+												</div>
+												<div class="o-combobox" data-js="o-combobox">
+													<select name="heatDuration" id="heatDuration">  
+														<option value="1">1일</option>  
+														<option value="2">2일</option>  
+														<option value="3">3일</option>  
+														<option value="4">일주일 이상</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="t-form__row" id="symptom"><!-- 증상 -->
+									<div class="sec-header">
+										<h2>현재 증상을 모두 선택해 주세요.</h2><span class="required">*</span>
+									</div>
+									<div class="symptom-list">
+										<div class="symptom-list__item">
+											<input type="checkbox" class="symptom-list__checkbox" name="symptomsCd" id="smptm_999" value="999" data-val="증상없음" placeholder="현재 증상을 모두 선택해 주세요.">
+											<label for="smptm_999" class="symptom-list__label">
+												<img src="/static/assets/images/visitor/ill_999.svg" alt="">
+												<span>증상없음</span>
+											</label>
+										</div>
+										<div class="symptom-list__item">
+											<input type="checkbox" class="symptom-list__checkbox" name="symptomsCd" id="smptm_100" value="100" data-val="기침" placeholder="현재 증상을 모두 선택해 주세요.">
+											<label for="smptm_100" class="symptom-list__label">
+												<img src="/static/assets/images/visitor/ill_100.svg" alt="">
+												<span>기침</span>
+											</label>
+										</div>
+										<div class="symptom-list__item">
+											<input type="checkbox" class="symptom-list__checkbox" name="symptomsCd" id="smptm_101" value="101" data-val="가래" placeholder="현재 증상을 모두 선택해 주세요.">
+											<label for="smptm_101" class="symptom-list__label">
+												<img src="/static/assets/images/visitor/ill_101.svg" alt="">
+												<span>가래</span>
+											</label>
+										</div>
+										<div class="symptom-list__item">
+											<input type="checkbox" class="symptom-list__checkbox" name="symptomsCd" id="smptm_102" value="102" data-val="인후통" placeholder="현재 증상을 모두 선택해 주세요.">
+											<label for="smptm_102" class="symptom-list__label">
+												<img src="/static/assets/images/visitor/ill_102.svg" alt="">
+												<span>인후통</span>
+											</label>
+										</div>
+										<div class="symptom-list__item">
+											<input type="checkbox" class="symptom-list__checkbox" name="symptomsCd" id="smptm_103" value="103" data-val="호흡곤란" placeholder="현재 증상을 모두 선택해 주세요.">
+											<label for="smptm_103" class="symptom-list__label">
+												<img src="/static/assets/images/visitor/ill_103.svg" alt="">
+												<span>호흡곤란</span>
+											</label>
+										</div>
+										<div class="symptom-list__item">
+											<input type="checkbox" class="symptom-list__checkbox" name="symptomsCd" id="smptm_110" value="110" data-val="근육통" placeholder="현재 증상을 모두 선택해 주세요.">
+											<label for="smptm_110" class="symptom-list__label">
+												<img src="/static/assets/images/visitor/ill_110.svg" alt="">
+												<span>근육통</span>
+											</label>
+										</div>
+										<div class="symptom-list__item">
+											<input type="checkbox" class="symptom-list__checkbox" name="symptomsCd" id="smptm_111" value="111" data-val="두통" placeholder="현재 증상을 모두 선택해 주세요.">
+											<label for="smptm_111" class="symptom-list__label">
+												<img src="/static/assets/images/visitor/ill_111.svg" alt="">
+												<span>두통</span>
+											</label>
+										</div>
+										<div class="symptom-list__item">
+											<input type="checkbox" class="symptom-list__checkbox" name="symptomsCd" id="smptm_112" value="112" data-val="오한" placeholder="현재 증상을 모두 선택해 주세요.">
+											<label for="smptm_112" class="symptom-list__label">
+												<img src="/static/assets/images/visitor/ill_112.svg" alt="">
+												<span>오한</span>
+											</label>
+										</div>
+										<div class="symptom-list__item">
+											<input type="checkbox" class="symptom-list__checkbox" name="symptomsCd" id="smptm_120" value="120" data-val="미각소실" placeholder="현재 증상을 모두 선택해 주세요.">
+											<label for="smptm_120" class="symptom-list__label">
+												<img src="/static/assets/images/visitor/ill_120.svg" alt="">
+												<span>미각소실</span>
+											</label>
+										</div>
+										<div class="symptom-list__item">
+											<input type="checkbox" class="symptom-list__checkbox" name="symptomsCd" id="smptm_121" value="121" data-val="후각소실" placeholder="현재 증상을 모두 선택해 주세요.">
+											<label for="smptm_121" class="symptom-list__label">
+												<img src="/static/assets/images/visitor/ill_121.svg" alt="">
+												<span>후각소실</span>
+											</label>
+										</div>
+										<div class="symptom-list__item">
+											<input type="checkbox" class="symptom-list__checkbox" name="symptomsCd" id="smptm_200" value="200" data-val="설사" placeholder="현재 증상을 모두 선택해 주세요.">
+											<label for="smptm_200" class="symptom-list__label">
+												<img src="/static/assets/images/visitor/ill_200.svg" alt="">
+												<span>설사</span>
+											</label>
+										</div>
+										<div class="symptom-list__item">
+											<input type="checkbox" class="symptom-list__checkbox" name="symptomsCd" id="smptm_300" value="300" data-val="폐렴" placeholder="현재 증상을 모두 선택해 주세요.">
+											<label for="smptm_300" class="symptom-list__label">
+												<img src="/static/assets/images/visitor/ill_300.svg" alt="">
+												<span>폐렴</span>
+											</label>
+										</div>
+										<div class="symptom-list__item">
+											<input type="checkbox" class="symptom-list__checkbox" name="symptomsCd" id="smptm_998" value="998" data-val="기타" placeholder="현재 증상을 모두 선택해 주세요.">
+											<label for="smptm_998" class="symptom-list__label">
+												<img src="/static/assets/images/visitor/ill_998.svg" alt="">
+												<span>기타</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="t-form__row" id="symptomsDtDom" hidden="true"> <!-- 발병일자 -->
+									<div class="sec-header">
+										<h2>발병일자</h2>
+									</div>
+									<div class="t-input">
+										<input type="text" class="text_only_number" id="symptomsDt" placeholder="YYYYMMDD" maxlength="8">
+									</div>
+								</div>
+								<div class="t-form__row"><!-- 건강상태 -->
+									<div class="sec-header">
+										<h2>기타 현재 건강 상태에 대해 입력해 주세요.</h2>
+									</div>
+									<div class="t-input">
+										<input type="text" class="text_text_name" id="otherSymptoms" placeholder="현재 건강상태에 대해 자세히 적어주세요." maxlength="100">
+									</div>
+								</div>
+								<div class="t-form__row"><!-- 접촉 -->
+									<div class="sec-header">
+										<h2>접촉의심여부</h2><span class="required">*</span>
+									</div>
+									<div class="rdo-tab" data-js="rdo-toggle">
+										<div class="t-radio-group t-radio-group--button">
+											<div class="t-radio">
+												<input type="radio" name="suspiciousContactYn" id="suspiciousContactYn_Y" data-js="rdo-toggle__rdo" data-target="rdo-panel__suspiciousContactYn_Y" value="Y">
+												<label for="suspiciousContactYn_Y"><span>예</span></label>
+											</div>
+										
+											<div class="t-radio">
+												<input type="radio" name="suspiciousContactYn" id="suspiciousContactYn_N" data-js="rdo-toggle__rdo" data-target="rdo-panel__suspiciousContactYn_N" value="N" checked="">
+												<label for="suspiciousContactYn_N"><span>아니오</span></label>
+											</div>
+										
+											<div class="t-radio">
+												<input type="radio" name="suspiciousContactYn" id="suspiciousContactYn_U" data-js="rdo-toggle__rdo" data-target="rdo-panel__suspiciousContactYn_U" value="U">
+												<label for="suspiciousContactYn_U"><span>모름</span></label>
+											</div>
+										</div>
+										<div class="rdo-tab__panel" data-js="rdo-toggle__panel" data-id="rdo-panel__suspiciousContactYn_Y">
+											<div class="t-form__row">
+												<div class="sec-header">
+													<h2>확진자 이름</h2>
+												</div>
+												<div class="t-input">
+													<input type="text" id="suspiciousContactNm" placeholder="확진자 이름을 입력해주세요." maxlength="50">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="t-form__row"><!-- 방문한 지역 -->
+									<div class="sec-header">
+										<h2>집단 발병지역 방문여부</h2><span class="required">*</span>
+									</div>
+									<div class="rdo-tab" data-js="rdo-toggle">
+										<div class="t-radio-group t-radio-group--button">
+											<div class="t-radio">
+												<input type="radio" name="outbreakAreaVisitYn" id="outbreakAreaVisitYn_Y" data-js="rdo-toggle__rdo" data-target="rdo-panel__outbreakAreaVisitYn_Y" value="Y">
+												<label for="outbreakAreaVisitYn_Y"><span>예</span></label>
+											</div>
+										
+											<div class="t-radio">
+												<input type="radio" name="outbreakAreaVisitYn" id="outbreakAreaVisitYn_N" data-js="rdo-toggle__rdo" data-target="rdo-panel__outbreakAreaVisitYn_N" value="N" checked="">
+												<label for="outbreakAreaVisitYn_N"><span>아니오</span></label>
+											</div>
+										
+											<div class="t-radio">
+												<input type="radio" name="outbreakAreaVisitYn" id="outbreakAreaVisitYn_U" data-js="rdo-toggle__rdo" data-target="rdo-panel__outbreakAreaVisitYn_U" value="U">
+												<label for="outbreakAreaVisitYn_U"><span>모름</span></label>
+											</div>
+										</div>
+										<div class="rdo-tab__panel" data-js="rdo-toggle__panel" data-id="rdo-panel__outbreakAreaVisitYn_Y">
+											<div class="t-form__row">
+												<div class="sec-header">
+													<h2>방문한 지역명을 입력해주세요.</h2>
+												</div>
+												<div class="t-input">
+													<input type="text" id="outbreakArea" placeholder="방문한 지역 / 방문시설명칭을 입력해주세요." maxlength="100">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="t-form__row"><!-- 여행지역 -->
+									<div class="sec-header">
+										<h2>14일 이내 해외여행 여부</h2><span class="required">*</span>
+									</div>
+									<div class="rdo-tab" data-js="rdo-toggle">
+										<div class="t-radio-group t-radio-group--button">
+											<div class="t-radio">
+												<input type="radio" name="travelYn" id="travelYn_Y" data-js="rdo-toggle__rdo" data-target="rdo-panel__travelYn_Y" value="Y">
+												<label for="travelYn_Y"><span>예</span></label>
+											</div>
+											<div class="t-radio">
+												<input type="radio" name="travelYn" id="travelYn_N" data-js="rdo-toggle__rdo" data-target="rdo-panel__travelYn_N" value="N" checked="">
+												<label for="travelYn_N"><span>아니오</span></label>
+											</div>
+										</div>
+										<div class="rdo-tab__panel" data-js="rdo-toggle__panel" data-id="rdo-panel__travelYn_Y">
+											<div class="t-form__row">
+												<div class="sec-header">
+													<h2>방문국가</h2>
+												</div>
+												<div class="t-input">
+													<input type="text" id="travelCountries" placeholder="방문 국가를 입력해주세요." maxlength="100">
+												</div>
+											</div>
+											<div class="t-form__row">
+												<div class="sec-header">
+													<h2>입국일자</h2>
+												</div>
+												<div class="t-input">
+													<input type="text" class="text_only_number" id="travelEnterDt" placeholder="YYYYMMDD" maxlength="8">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="t-form__row"><!-- 정책 동의 -->
+									<div class="sec-header"></div>
+									<div class="t-form__flex">
+										<div class="o-checkbox-wrap">
+											<div class="o-checkbox">
+												<input type="checkbox" id="chk_agree" value="Y" placeholder="개인정보 수집 동의는 필수입니다." data-checkrequired="">
+												<label for="chk_agree"><span>개인정보 수집 동의 <a href="javascript:showPPLayer(1);">[개인정보취급방침]</a></span></label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="step-panels__fotter">
+								<div class="cta-wrap">
+									<div class="cta-wrap__col">
+										<button type="button" data-js="step-prev" class="cta cta--cancel"> 이전</button>
+									</div>
+									<div class="cta-wrap__col">
+										<button type="button" data-js="step-next" class="cta cta--confirm"> 제출하기 </button>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+			<input type="hidden" id="insttid" value="11700068A">
+			<input type="hidden" id="insttnm" value="서울특별시관악구보건소">
+			<input type="hidden" id="ctprvnCd" value="01">
+			<input type="hidden" id="registerId" value="SYSTEM">
+		</main>
+	</div>
+</div>
+		<div class="person-modal-wrap" id="ppLayerPop">
+			<div class="person-modal-box">
+				<h2 class="pmodal-title">개인정보 수집 및 이용동의</h2>
+				<div class="pmodal-table">
+					<table>
+						<colgroup>
+							<col style="width:80px">
+							<col>
+						</colgroup>
+						<tbody>
+						<tr>
+							<th>목적</th><!-- 목적 -->
+							<td>선별진료소 기초역학조사 정보등록</td>
+						</tr>
+						<tr>
+							<th>항목</th><!-- 항목 -->
+							<td>주민등록번호/외국인번호, 이름, 생년월일, 성별,국적,휴대폰번호,실거주지 주소,직업,증상,접촉의심여부,집단 발병지역 방문여부,14일 이내 해외여행여부,검사경위</td>
+						</tr>
+						<tr>
+							<th>보유기간</th><!-- 보유기간 -->
+							<td>코로나19 경계상황 종료 후 즉시 폐기</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="pmodal-btn">
+					<button type="button" class="" data-dismiss="cancel" id="btnClosePPLayer" onclick="showPPLayer(0);"><span>확인</span></button>
+				</div>
+			</div>
+		</div><!-- //person-modal-wrap -->
+		
+		<div class="person-modal-wrap" id="jusoModalPop" style="display: none;">
+			<div class="person-modal-box">
+				
+				
+
+
+
+
+
+
+
+
+
+
+<!-- js -->
+<script src="/static/js/script.js"></script>
+
+<!-- css -->
+
+<link rel="stylesheet" href="/static/css/style.css">
+
+		<div id="root">
+			
+
+             <div class="k-content address-modal">
+                <div class="k-head type-nofixed">
+                    <div class="header-inner">
+                        <div class="header-item left">
+                            <div class="j-center">
+                                <button type="button" id="btnBack" name="close" class="">
+                                    <span class="k-icon icon-head-back"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="header-item center">
+                            <div class="header-title">주소검색</div>
+                        </div>
+                        <div class="header-item right">
+                            <div class="j-center">
+                                <button type="button" id="btnClose" name="close" class="">
+                                    <span class="k-icon icon-modal-close"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-inner k-min-height">
+                    <!--  -->
+                    <div class="section noti-list-section addr-head">
+                        <!--  -->
+                        <div class="noti-top">
+                            <!--  -->
+
+
+
+                            <div class="k-input-search relative">
+                                <div class="inner" name="form2" id="form">
+                                    <input type="text" value="" class="on" name="keyword" id="keyword" onkeydown="enterSearch();" placeholder="도로명주소, 건물명 또는 지번입력">
+                                    <button type="button" class="clear"><span class="k-icon icon-input-clear"></span></button>
+                                    <button type="button" class="" id="btnSearch"><span class="k-icon icon-search"></span></button>
+                                </div>
+                            </div>
+                            <div class="addr-txt" style="font-size:14px;">
+                                검색어 예: 도로명(반포대로 58), 건물명(독립기념관), 지번(삼성동 25)
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                    <!--  -->
+
+                    <div class="section addr-info white" id="addrInfo" style="display: none;">
+                        <div class="add-info-txt">
+							보다 정확한 검색을 위하여 다음 권장 사항을 확인하여 주시기 바랍니다.
+                        </div>
+
+                        <div class="add-info-ex">
+                            <dl>
+                                <dt>시, 도 / 시, 군, 구 + 도로명 주소</dt>
+                                <dd>예 ) 종로구 사직로 161</dd>
+                            </dl>
+                            <dl>
+                                <dt>시, 도 / 시, 군, 구 / 읍, 면 + 지번</dt>
+                                <dd>예 ) 종로구 사직로 161</dd>
+                            </dl>
+                            <dl>
+                                <dt>시, 도 / 시, 군, 구 / + 건물명</dt>
+                                <dd>예 ) 종로구 사직로 161</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <!--  -->
+                    <div class="section addr-body white" id="addrList">
+                        <div class="addr-result-count">
+                           도로명 주소 검색결과 <span id="totalCnt">17</span> 건
+                        </div>
+                        <!--  -->
+                        <div class="res-list" id="list">
+
+                            <div class="res-item j-between" data-seq="0">
+                                <div class="left">
+                                    <div class="addr">
+                                        <span class="doro">도로명</span>
+                                        서울특별시 강남구 삼성로72길 3(대치동)
+                                    </div>
+                                    <div class="addr">
+                                        <span class="jibun">지번</span>
+                                        서울특별시 강남구 대치동 961-15 월드스포츠센타
+                                    </div>
+                                </div>
+                                <div class="right  k-valign-center">
+                                    <div>06186</div>
+
+                                </div>
+                            </div>
+
+    <input type="hidden" name="roadAddr" id="roadAddr" value="서울특별시 강남구 삼성로72길 3(대치동)">
+    <input type="hidden" name="roadAddrPart1" id="roadAddrPart1" value="서울특별시 강남구 삼성로72길 3">
+    <input type="hidden" name="roadAddrPart2" id="roadAddrPart2" value="(대치동)">
+    <input type="hidden" name="jibunAddr" id="jibunAddr" value="서울특별시 강남구 대치동 961-15 월드스포츠센타">
+    <input type="hidden" name="engAddr" id="engAddr" value="3, Samseong-ro 72-gil, Gangnam-gu, Seoul">
+    <input type="hidden" name="zipNo" id="zipNo" value="06186">
+    <input type="hidden" name="admCd" id="admCd" value="1168010600">
+    <input type="hidden" name="rnMgtSn" id="rnMgtSn" value="116804166425">
+    <input type="hidden" name="bdMgtSn" id="bdMgtSn" value="1168010600109610015012796">
+    <input type="hidden" name="detBdNmList" id="detBdNmList" value="">
+    <input type="hidden" name="bdNm" id="bdNm" value="월드스포츠센타">
+    <input type="hidden" name="bdKdcd" id="bdKdcd" value="0">
+    <input type="hidden" name="siNm" id="siNm" value="서울특별시">
+    <input type="hidden" name="sggNm" id="sggNm" value="강남구">
+    <input type="hidden" name="emdNm" id="emdNm" value="대치동">
+    <input type="hidden" name="liNm" id="liNm" value="">
+    <input type="hidden" name="rn" id="rn" value="삼성로72길">
+    <input type="hidden" name="udrtYn" id="udrtYn" value="0">
+    <input type="hidden" name="buldMnnm" id="buldMnnm" value="3">
+    <input type="hidden" name="buldSlno" id="buldSlno" value="0">
+    <input type="hidden" name="mtYn" id="mtYn" value="0">
+    <input type="hidden" name="lnbrMnnm" id="lnbrMnnm" value="961">
+    <input type="hidden" name="lnbrSlno" id="lnbrSlno" value="15">
+    <input type="hidden" name="emdNo" id="emdNo" value="01">
+
+
+
+                            <div class="res-item j-between" data-seq="1">
+                                <div class="left">
+                                    <div class="addr">
+                                        <span class="doro">도로명</span>
+                                        서울특별시 강남구 삼성로72길 5(대치동)
+                                    </div>
+                                    <div class="addr">
+                                        <span class="jibun">지번</span>
+                                        서울특별시 강남구 대치동 961-16
+                                    </div>
+                                </div>
+                                <div class="right  k-valign-center">
+                                    <div>06186</div>
+
+                                </div>
+                            </div>
+
+    <input type="hidden" name="roadAddr" id="roadAddr" value="서울특별시 강남구 삼성로72길 5(대치동)">
+    <input type="hidden" name="roadAddrPart1" id="roadAddrPart1" value="서울특별시 강남구 삼성로72길 5">
+    <input type="hidden" name="roadAddrPart2" id="roadAddrPart2" value="(대치동)">
+    <input type="hidden" name="jibunAddr" id="jibunAddr" value="서울특별시 강남구 대치동 961-16">
+    <input type="hidden" name="engAddr" id="engAddr" value="5, Samseong-ro 72-gil, Gangnam-gu, Seoul">
+    <input type="hidden" name="zipNo" id="zipNo" value="06186">
+    <input type="hidden" name="admCd" id="admCd" value="1168010600">
+    <input type="hidden" name="rnMgtSn" id="rnMgtSn" value="116804166425">
+    <input type="hidden" name="bdMgtSn" id="bdMgtSn" value="1168010600109610016012810">
+    <input type="hidden" name="detBdNmList" id="detBdNmList" value="">
+    <input type="hidden" name="bdNm" id="bdNm" value="">
+    <input type="hidden" name="bdKdcd" id="bdKdcd" value="0">
+    <input type="hidden" name="siNm" id="siNm" value="서울특별시">
+    <input type="hidden" name="sggNm" id="sggNm" value="강남구">
+    <input type="hidden" name="emdNm" id="emdNm" value="대치동">
+    <input type="hidden" name="liNm" id="liNm" value="">
+    <input type="hidden" name="rn" id="rn" value="삼성로72길">
+    <input type="hidden" name="udrtYn" id="udrtYn" value="0">
+    <input type="hidden" name="buldMnnm" id="buldMnnm" value="5">
+    <input type="hidden" name="buldSlno" id="buldSlno" value="0">
+    <input type="hidden" name="mtYn" id="mtYn" value="0">
+    <input type="hidden" name="lnbrMnnm" id="lnbrMnnm" value="961">
+    <input type="hidden" name="lnbrSlno" id="lnbrSlno" value="16">
+    <input type="hidden" name="emdNo" id="emdNo" value="01">
+
+
+
+                            <div class="res-item j-between" data-seq="2">
+                                <div class="left">
+                                    <div class="addr">
+                                        <span class="doro">도로명</span>
+                                        서울특별시 강남구 삼성로72길 7(대치동)
+                                    </div>
+                                    <div class="addr">
+                                        <span class="jibun">지번</span>
+                                        서울특별시 강남구 대치동 961-17
+                                    </div>
+                                </div>
+                                <div class="right  k-valign-center">
+                                    <div>06186</div>
+
+                                </div>
+                            </div>
+
+    <input type="hidden" name="roadAddr" id="roadAddr" value="서울특별시 강남구 삼성로72길 7(대치동)">
+    <input type="hidden" name="roadAddrPart1" id="roadAddrPart1" value="서울특별시 강남구 삼성로72길 7">
+    <input type="hidden" name="roadAddrPart2" id="roadAddrPart2" value="(대치동)">
+    <input type="hidden" name="jibunAddr" id="jibunAddr" value="서울특별시 강남구 대치동 961-17">
+    <input type="hidden" name="engAddr" id="engAddr" value="7, Samseong-ro 72-gil, Gangnam-gu, Seoul">
+    <input type="hidden" name="zipNo" id="zipNo" value="06186">
+    <input type="hidden" name="admCd" id="admCd" value="1168010600">
+    <input type="hidden" name="rnMgtSn" id="rnMgtSn" value="116804166425">
+    <input type="hidden" name="bdMgtSn" id="bdMgtSn" value="1168010600109610017014537">
+    <input type="hidden" name="detBdNmList" id="detBdNmList" value="">
+    <input type="hidden" name="bdNm" id="bdNm" value="">
+    <input type="hidden" name="bdKdcd" id="bdKdcd" value="0">
+    <input type="hidden" name="siNm" id="siNm" value="서울특별시">
+    <input type="hidden" name="sggNm" id="sggNm" value="강남구">
+    <input type="hidden" name="emdNm" id="emdNm" value="대치동">
+    <input type="hidden" name="liNm" id="liNm" value="">
+    <input type="hidden" name="rn" id="rn" value="삼성로72길">
+    <input type="hidden" name="udrtYn" id="udrtYn" value="0">
+    <input type="hidden" name="buldMnnm" id="buldMnnm" value="7">
+    <input type="hidden" name="buldSlno" id="buldSlno" value="0">
+    <input type="hidden" name="mtYn" id="mtYn" value="0">
+    <input type="hidden" name="lnbrMnnm" id="lnbrMnnm" value="961">
+    <input type="hidden" name="lnbrSlno" id="lnbrSlno" value="17">
+    <input type="hidden" name="emdNo" id="emdNo" value="01">
+
+
+
+                            <div class="res-item j-between" data-seq="3">
+                                <div class="left">
+                                    <div class="addr">
+                                        <span class="doro">도로명</span>
+                                        서울특별시 강남구 삼성로72길 31(대치동)
+                                    </div>
+                                    <div class="addr">
+                                        <span class="jibun">지번</span>
+                                        서울특별시 강남구 대치동 971-10
+                                    </div>
+                                </div>
+                                <div class="right  k-valign-center">
+                                    <div>06187</div>
+
+                                </div>
+                            </div>
+
+    <input type="hidden" name="roadAddr" id="roadAddr" value="서울특별시 강남구 삼성로72길 31(대치동)">
+    <input type="hidden" name="roadAddrPart1" id="roadAddrPart1" value="서울특별시 강남구 삼성로72길 31">
+    <input type="hidden" name="roadAddrPart2" id="roadAddrPart2" value="(대치동)">
+    <input type="hidden" name="jibunAddr" id="jibunAddr" value="서울특별시 강남구 대치동 971-10">
+    <input type="hidden" name="engAddr" id="engAddr" value="31, Samseong-ro 72-gil, Gangnam-gu, Seoul">
+    <input type="hidden" name="zipNo" id="zipNo" value="06187">
+    <input type="hidden" name="admCd" id="admCd" value="1168010600">
+    <input type="hidden" name="rnMgtSn" id="rnMgtSn" value="116804166425">
+    <input type="hidden" name="bdMgtSn" id="bdMgtSn" value="1168010600109710010000001">
+    <input type="hidden" name="detBdNmList" id="detBdNmList" value="">
+    <input type="hidden" name="bdNm" id="bdNm" value="">
+    <input type="hidden" name="bdKdcd" id="bdKdcd" value="1">
+    <input type="hidden" name="siNm" id="siNm" value="서울특별시">
+    <input type="hidden" name="sggNm" id="sggNm" value="강남구">
+    <input type="hidden" name="emdNm" id="emdNm" value="대치동">
+    <input type="hidden" name="liNm" id="liNm" value="">
+    <input type="hidden" name="rn" id="rn" value="삼성로72길">
+    <input type="hidden" name="udrtYn" id="udrtYn" value="0">
+    <input type="hidden" name="buldMnnm" id="buldMnnm" value="31">
+    <input type="hidden" name="buldSlno" id="buldSlno" value="0">
+    <input type="hidden" name="mtYn" id="mtYn" value="0">
+    <input type="hidden" name="lnbrMnnm" id="lnbrMnnm" value="971">
+    <input type="hidden" name="lnbrSlno" id="lnbrSlno" value="10">
+    <input type="hidden" name="emdNo" id="emdNo" value="01">
+
+
+
+                            <div class="res-item j-between" data-seq="4">
+                                <div class="left">
+                                    <div class="addr">
+                                        <span class="doro">도로명</span>
+                                        서울특별시 강남구 삼성로72길 33(대치동)
+                                    </div>
+                                    <div class="addr">
+                                        <span class="jibun">지번</span>
+                                        서울특별시 강남구 대치동 971-11
+                                    </div>
+                                </div>
+                                <div class="right  k-valign-center">
+                                    <div>06187</div>
+
+                                </div>
+                            </div>
+
+    <input type="hidden" name="roadAddr" id="roadAddr" value="서울특별시 강남구 삼성로72길 33(대치동)">
+    <input type="hidden" name="roadAddrPart1" id="roadAddrPart1" value="서울특별시 강남구 삼성로72길 33">
+    <input type="hidden" name="roadAddrPart2" id="roadAddrPart2" value="(대치동)">
+    <input type="hidden" name="jibunAddr" id="jibunAddr" value="서울특별시 강남구 대치동 971-11">
+    <input type="hidden" name="engAddr" id="engAddr" value="33, Samseong-ro 72-gil, Gangnam-gu, Seoul">
+    <input type="hidden" name="zipNo" id="zipNo" value="06187">
+    <input type="hidden" name="admCd" id="admCd" value="1168010600">
+    <input type="hidden" name="rnMgtSn" id="rnMgtSn" value="116804166425">
+    <input type="hidden" name="bdMgtSn" id="bdMgtSn" value="1168010600109710011012867">
+    <input type="hidden" name="detBdNmList" id="detBdNmList" value="">
+    <input type="hidden" name="bdNm" id="bdNm" value="">
+    <input type="hidden" name="bdKdcd" id="bdKdcd" value="1">
+    <input type="hidden" name="siNm" id="siNm" value="서울특별시">
+    <input type="hidden" name="sggNm" id="sggNm" value="강남구">
+    <input type="hidden" name="emdNm" id="emdNm" value="대치동">
+    <input type="hidden" name="liNm" id="liNm" value="">
+    <input type="hidden" name="rn" id="rn" value="삼성로72길">
+    <input type="hidden" name="udrtYn" id="udrtYn" value="0">
+    <input type="hidden" name="buldMnnm" id="buldMnnm" value="33">
+    <input type="hidden" name="buldSlno" id="buldSlno" value="0">
+    <input type="hidden" name="mtYn" id="mtYn" value="0">
+    <input type="hidden" name="lnbrMnnm" id="lnbrMnnm" value="971">
+    <input type="hidden" name="lnbrSlno" id="lnbrSlno" value="11">
+    <input type="hidden" name="emdNo" id="emdNo" value="01">
+
+
+
+                            <div class="res-item j-between" data-seq="5">
+                                <div class="left">
+                                    <div class="addr">
+                                        <span class="doro">도로명</span>
+                                        서울특별시 강남구 삼성로72길 33-2(대치동)
+                                    </div>
+                                    <div class="addr">
+                                        <span class="jibun">지번</span>
+                                        서울특별시 강남구 대치동 979-8
+                                    </div>
+                                </div>
+                                <div class="right  k-valign-center">
+                                    <div>06187</div>
+
+                                </div>
+                            </div>
+
+    <input type="hidden" name="roadAddr" id="roadAddr" value="서울특별시 강남구 삼성로72길 33-2(대치동)">
+    <input type="hidden" name="roadAddrPart1" id="roadAddrPart1" value="서울특별시 강남구 삼성로72길 33-2">
+    <input type="hidden" name="roadAddrPart2" id="roadAddrPart2" value="(대치동)">
+    <input type="hidden" name="jibunAddr" id="jibunAddr" value="서울특별시 강남구 대치동 979-8">
+    <input type="hidden" name="engAddr" id="engAddr" value="33-2, Samseong-ro 72-gil, Gangnam-gu, Seoul">
+    <input type="hidden" name="zipNo" id="zipNo" value="06187">
+    <input type="hidden" name="admCd" id="admCd" value="1168010600">
+    <input type="hidden" name="rnMgtSn" id="rnMgtSn" value="116804166425">
+    <input type="hidden" name="bdMgtSn" id="bdMgtSn" value="1168010600109790008012854">
+    <input type="hidden" name="detBdNmList" id="detBdNmList" value="">
+    <input type="hidden" name="bdNm" id="bdNm" value="">
+    <input type="hidden" name="bdKdcd" id="bdKdcd" value="0">
+    <input type="hidden" name="siNm" id="siNm" value="서울특별시">
+    <input type="hidden" name="sggNm" id="sggNm" value="강남구">
+    <input type="hidden" name="emdNm" id="emdNm" value="대치동">
+    <input type="hidden" name="liNm" id="liNm" value="">
+    <input type="hidden" name="rn" id="rn" value="삼성로72길">
+    <input type="hidden" name="udrtYn" id="udrtYn" value="0">
+    <input type="hidden" name="buldMnnm" id="buldMnnm" value="33">
+    <input type="hidden" name="buldSlno" id="buldSlno" value="2">
+    <input type="hidden" name="mtYn" id="mtYn" value="0">
+    <input type="hidden" name="lnbrMnnm" id="lnbrMnnm" value="979">
+    <input type="hidden" name="lnbrSlno" id="lnbrSlno" value="8">
+    <input type="hidden" name="emdNo" id="emdNo" value="01">
+
+
+
+                            <div class="res-item j-between" data-seq="6">
+                                <div class="left">
+                                    <div class="addr">
+                                        <span class="doro">도로명</span>
+                                        서울특별시 강남구 삼성로72길 33-3(대치동)
+                                    </div>
+                                    <div class="addr">
+                                        <span class="jibun">지번</span>
+                                        서울특별시 강남구 대치동 971-13
+                                    </div>
+                                </div>
+                                <div class="right  k-valign-center">
+                                    <div>06187</div>
+
+                                </div>
+                            </div>
+
+    <input type="hidden" name="roadAddr" id="roadAddr" value="서울특별시 강남구 삼성로72길 33-3(대치동)">
+    <input type="hidden" name="roadAddrPart1" id="roadAddrPart1" value="서울특별시 강남구 삼성로72길 33-3">
+    <input type="hidden" name="roadAddrPart2" id="roadAddrPart2" value="(대치동)">
+    <input type="hidden" name="jibunAddr" id="jibunAddr" value="서울특별시 강남구 대치동 971-13">
+    <input type="hidden" name="engAddr" id="engAddr" value="33-3, Samseong-ro 72-gil, Gangnam-gu, Seoul">
+    <input type="hidden" name="zipNo" id="zipNo" value="06187">
+    <input type="hidden" name="admCd" id="admCd" value="1168010600">
+    <input type="hidden" name="rnMgtSn" id="rnMgtSn" value="116804166425">
+    <input type="hidden" name="bdMgtSn" id="bdMgtSn" value="1168010600109710013012826">
+    <input type="hidden" name="detBdNmList" id="detBdNmList" value="">
+    <input type="hidden" name="bdNm" id="bdNm" value="">
+    <input type="hidden" name="bdKdcd" id="bdKdcd" value="0">
+    <input type="hidden" name="siNm" id="siNm" value="서울특별시">
+    <input type="hidden" name="sggNm" id="sggNm" value="강남구">
+    <input type="hidden" name="emdNm" id="emdNm" value="대치동">
+    <input type="hidden" name="liNm" id="liNm" value="">
+    <input type="hidden" name="rn" id="rn" value="삼성로72길">
+    <input type="hidden" name="udrtYn" id="udrtYn" value="0">
+    <input type="hidden" name="buldMnnm" id="buldMnnm" value="33">
+    <input type="hidden" name="buldSlno" id="buldSlno" value="3">
+    <input type="hidden" name="mtYn" id="mtYn" value="0">
+    <input type="hidden" name="lnbrMnnm" id="lnbrMnnm" value="971">
+    <input type="hidden" name="lnbrSlno" id="lnbrSlno" value="13">
+    <input type="hidden" name="emdNo" id="emdNo" value="01">
+
+
+
+                            <div class="res-item j-between" data-seq="7">
+                                <div class="left">
+                                    <div class="addr">
+                                        <span class="doro">도로명</span>
+                                        서울특별시 강남구 삼성로72길 33-4(대치동)
+                                    </div>
+                                    <div class="addr">
+                                        <span class="jibun">지번</span>
+                                        서울특별시 강남구 대치동 979-7
+                                    </div>
+                                </div>
+                                <div class="right  k-valign-center">
+                                    <div>06187</div>
+
+                                </div>
+                            </div>
+
+    <input type="hidden" name="roadAddr" id="roadAddr" value="서울특별시 강남구 삼성로72길 33-4(대치동)">
+    <input type="hidden" name="roadAddrPart1" id="roadAddrPart1" value="서울특별시 강남구 삼성로72길 33-4">
+    <input type="hidden" name="roadAddrPart2" id="roadAddrPart2" value="(대치동)">
+    <input type="hidden" name="jibunAddr" id="jibunAddr" value="서울특별시 강남구 대치동 979-7">
+    <input type="hidden" name="engAddr" id="engAddr" value="33-4, Samseong-ro 72-gil, Gangnam-gu, Seoul">
+    <input type="hidden" name="zipNo" id="zipNo" value="06187">
+    <input type="hidden" name="admCd" id="admCd" value="1168010600">
+    <input type="hidden" name="rnMgtSn" id="rnMgtSn" value="116804166425">
+    <input type="hidden" name="bdMgtSn" id="bdMgtSn" value="1168010600109790007012835">
+    <input type="hidden" name="detBdNmList" id="detBdNmList" value="">
+    <input type="hidden" name="bdNm" id="bdNm" value="">
+    <input type="hidden" name="bdKdcd" id="bdKdcd" value="1">
+    <input type="hidden" name="siNm" id="siNm" value="서울특별시">
+    <input type="hidden" name="sggNm" id="sggNm" value="강남구">
+    <input type="hidden" name="emdNm" id="emdNm" value="대치동">
+    <input type="hidden" name="liNm" id="liNm" value="">
+    <input type="hidden" name="rn" id="rn" value="삼성로72길">
+    <input type="hidden" name="udrtYn" id="udrtYn" value="0">
+    <input type="hidden" name="buldMnnm" id="buldMnnm" value="33">
+    <input type="hidden" name="buldSlno" id="buldSlno" value="4">
+    <input type="hidden" name="mtYn" id="mtYn" value="0">
+    <input type="hidden" name="lnbrMnnm" id="lnbrMnnm" value="979">
+    <input type="hidden" name="lnbrSlno" id="lnbrSlno" value="7">
+    <input type="hidden" name="emdNo" id="emdNo" value="01">
+
+
+
+                            <div class="res-item j-between" data-seq="8">
+                                <div class="left">
+                                    <div class="addr">
+                                        <span class="doro">도로명</span>
+                                        서울특별시 강남구 삼성로72길 33-6(대치동)
+                                    </div>
+                                    <div class="addr">
+                                        <span class="jibun">지번</span>
+                                        서울특별시 강남구 대치동 979
+                                    </div>
+                                </div>
+                                <div class="right  k-valign-center">
+                                    <div>06187</div>
+
+                                </div>
+                            </div>
+
+    <input type="hidden" name="roadAddr" id="roadAddr" value="서울특별시 강남구 삼성로72길 33-6(대치동)">
+    <input type="hidden" name="roadAddrPart1" id="roadAddrPart1" value="서울특별시 강남구 삼성로72길 33-6">
+    <input type="hidden" name="roadAddrPart2" id="roadAddrPart2" value="(대치동)">
+    <input type="hidden" name="jibunAddr" id="jibunAddr" value="서울특별시 강남구 대치동 979">
+    <input type="hidden" name="engAddr" id="engAddr" value="33-6, Samseong-ro 72-gil, Gangnam-gu, Seoul">
+    <input type="hidden" name="zipNo" id="zipNo" value="06187">
+    <input type="hidden" name="admCd" id="admCd" value="1168010600">
+    <input type="hidden" name="rnMgtSn" id="rnMgtSn" value="116804166425">
+    <input type="hidden" name="bdMgtSn" id="bdMgtSn" value="1168010600109790000000001">
+    <input type="hidden" name="detBdNmList" id="detBdNmList" value="">
+    <input type="hidden" name="bdNm" id="bdNm" value="">
+    <input type="hidden" name="bdKdcd" id="bdKdcd" value="0">
+    <input type="hidden" name="siNm" id="siNm" value="서울특별시">
+    <input type="hidden" name="sggNm" id="sggNm" value="강남구">
+    <input type="hidden" name="emdNm" id="emdNm" value="대치동">
+    <input type="hidden" name="liNm" id="liNm" value="">
+    <input type="hidden" name="rn" id="rn" value="삼성로72길">
+    <input type="hidden" name="udrtYn" id="udrtYn" value="0">
+    <input type="hidden" name="buldMnnm" id="buldMnnm" value="33">
+    <input type="hidden" name="buldSlno" id="buldSlno" value="6">
+    <input type="hidden" name="mtYn" id="mtYn" value="0">
+    <input type="hidden" name="lnbrMnnm" id="lnbrMnnm" value="979">
+    <input type="hidden" name="lnbrSlno" id="lnbrSlno" value="0">
+    <input type="hidden" name="emdNo" id="emdNo" value="01">
+
+
+
+                            <div class="res-item j-between" data-seq="9">
+                                <div class="left">
+                                    <div class="addr">
+                                        <span class="doro">도로명</span>
+                                        서울특별시 강남구 삼성로72길 35(대치동)
+                                    </div>
+                                    <div class="addr">
+                                        <span class="jibun">지번</span>
+                                        서울특별시 강남구 대치동 979-9
+                                    </div>
+                                </div>
+                                <div class="right  k-valign-center">
+                                    <div>06187</div>
+
+                                </div>
+                            </div>
+
+    <input type="hidden" name="roadAddr" id="roadAddr" value="서울특별시 강남구 삼성로72길 35(대치동)">
+    <input type="hidden" name="roadAddrPart1" id="roadAddrPart1" value="서울특별시 강남구 삼성로72길 35">
+    <input type="hidden" name="roadAddrPart2" id="roadAddrPart2" value="(대치동)">
+    <input type="hidden" name="jibunAddr" id="jibunAddr" value="서울특별시 강남구 대치동 979-9">
+    <input type="hidden" name="engAddr" id="engAddr" value="35, Samseong-ro 72-gil, Gangnam-gu, Seoul">
+    <input type="hidden" name="zipNo" id="zipNo" value="06187">
+    <input type="hidden" name="admCd" id="admCd" value="1168010600">
+    <input type="hidden" name="rnMgtSn" id="rnMgtSn" value="116804166425">
+    <input type="hidden" name="bdMgtSn" id="bdMgtSn" value="1168010600109790009012884">
+    <input type="hidden" name="detBdNmList" id="detBdNmList" value="">
+    <input type="hidden" name="bdNm" id="bdNm" value="">
+    <input type="hidden" name="bdKdcd" id="bdKdcd" value="0">
+    <input type="hidden" name="siNm" id="siNm" value="서울특별시">
+    <input type="hidden" name="sggNm" id="sggNm" value="강남구">
+    <input type="hidden" name="emdNm" id="emdNm" value="대치동">
+    <input type="hidden" name="liNm" id="liNm" value="">
+    <input type="hidden" name="rn" id="rn" value="삼성로72길">
+    <input type="hidden" name="udrtYn" id="udrtYn" value="0">
+    <input type="hidden" name="buldMnnm" id="buldMnnm" value="35">
+    <input type="hidden" name="buldSlno" id="buldSlno" value="0">
+    <input type="hidden" name="mtYn" id="mtYn" value="0">
+    <input type="hidden" name="lnbrMnnm" id="lnbrMnnm" value="979">
+    <input type="hidden" name="lnbrSlno" id="lnbrSlno" value="9">
+    <input type="hidden" name="emdNo" id="emdNo" value="01">
+
+</div>
+
+                        <!-- <p> <button type="button" class="" id="btnGetNextAddr" name="btnGetNextAddr"/> 다음 > </button></p> -->
+
+                        <div class="pmodal-btn">
+                            <!-- <button type="button" class="cta cta--confirm"> 이전 </button> -->
+                            <button type="button" class="cta cta--confirm" id="btnGetNextAddr" name="btnGetNextAddr" > 다음 </button>
+                        </div>
+
+                    </div>
+					
+
+                </div>
+            </div>
+          </div>
+            <!--  -->
+
+<script id="addressItem" type="text/template">
+
+                            <div class="res-item j-between" data-seq="{seq}">
+                                <div class="left">
+                                    <div class="addr">
+                                        <span class="doro">도로명</span>
+                                        {roadAddr}
+                                    </div>
+                                    <div class="addr">
+                                        <span class="jibun">지번</span>
+                                        {jibunAddr}
+                                    </div>
+                                </div>
+                                <div class="right  k-valign-center">
+                                    <div>{zipNo}</div>
+
+                                </div>
+                            </div>
+
+    <input type="hidden" name="roadAddr" id="roadAddr" value="{roadAddr}">
+    <input type="hidden" name="roadAddrPart1" id="roadAddrPart1" value="{roadAddrPart1}">
+    <input type="hidden" name="roadAddrPart2" id="roadAddrPart2" value="{roadAddrPart2}">
+    <input type="hidden" name="jibunAddr" id="jibunAddr" value="{jibunAddr}">
+    <input type="hidden" name="engAddr" id="engAddr" value="{engAddr}">
+    <input type="hidden" name="zipNo" id="zipNo" value="{zipNo}">
+    <input type="hidden" name="admCd" id="admCd" value="{admCd}">
+    <input type="hidden" name="rnMgtSn" id="rnMgtSn" value="{rnMgtSn}">
+    <input type="hidden" name="bdMgtSn" id="bdMgtSn" value="{bdMgtSn}">
+    <input type="hidden" name="detBdNmList" id="detBdNmList" value="{detBdNmList}">
+    <input type="hidden" name="bdNm" id="bdNm" value="{bdNm}">
+    <input type="hidden" name="bdKdcd" id="bdKdcd" value="{bdKdcd}">
+    <input type="hidden" name="siNm" id="siNm" value="{siNm}">
+    <input type="hidden" name="sggNm" id="sggNm" value="{sggNm}">
+    <input type="hidden" name="emdNm" id="emdNm" value="{emdNm}">
+    <input type="hidden" name="liNm" id="liNm" value="{liNm}">
+    <input type="hidden" name="rn" id="rn" value="{rn}">
+    <input type="hidden" name="udrtYn" id="udrtYn" value="{udrtYn}">
+    <input type="hidden" name="buldMnnm" id="buldMnnm" value="{buldMnnm}">
+    <input type="hidden" name="buldSlno" id="buldSlno" value="{buldSlno}">
+    <input type="hidden" name="mtYn" id="mtYn" value="{mtYn}">
+    <input type="hidden" name="lnbrMnnm" id="lnbrMnnm" value="{lnbrMnnm}">
+    <input type="hidden" name="lnbrSlno" id="lnbrSlno" value="{lnbrSlno}">
+    <input type="hidden" name="emdNo" id="emdNo" value="{emdNo}">
+
+</script>
+
+<script>
+var listCnt = 0;
+var pageNo = 0;
+$(function() {
+
+	
+});
+
+
+$("#btnGetNextAddr").on("click", function(){
+	pageNo++;
+    if(Math.floor(listCnt/10) >= pageNo){
+        getAddr(pageNo);
+    }else{
+    	$('#btnGetNextAddr').hide();
+    }
+});
+
+$("#btnSearch").on("click", function() {
+	pageNo = 1;
+    $("#list").html("");
+    $("#addrInfo").hide();
+    $("#addrList").show();
+    getAddr(pageNo);
+});
+
+$(document).on( 'click', '.j-between', function(e){
+	setMaping(this.dataset.seq);
+});
+
+$('[name=close]').click(function(){
+	showJusoPopup(0);
+});
+
+function enterSearch() {
+    var evt_code = (window.netscape) ? ev.which : event.keyCode;
+    if (evt_code == 13) {
+        event.keyCode = 0;
+        pageNo = 1;
+        $("#list").html("");
+        $("#addrInfo").hide();
+        $("#addrList").show();
+        getAddr(pageNo); //jsonp사용시 enter검색
+    }
+}
+
+
+function getAddr(pageNo){
+    // 적용예 (api 호출 전에 검색어 체크)
+    var keyword = $('#keyword').val();
+    if (!checkSearchedWord(keyword)) {
+        return ;
+    }
+
+    var params = {};
+    params.currentPage = pageNo;
+    params.countPerPage = '10';
+    params.confmKey = 'U01TX0FVVEgyMDIxMDEyMDExNDM1MTExMDcyMTE=';
+    params.keyword = keyword;
+    $.ajax({
+         url :"https://www.juso.go.kr/addrlink/addrLinkApiJsonp.do"
+        ,type:"post"
+        ,data:params
+        ,dataType:"jsonp"
+        ,crossDomain:true
+        ,success:function(xmlStr){
+        	if(navigator.appName.indexOf("Microsoft") > -1){
+                var xmlData = new ActiveXObject("Microsoft.XMLDOM");
+                xmlData.loadXML(xmlStr.returnXml)
+            }else{
+                var xmlData = xmlStr.returnXml;
+            }
+            var errCode = $(xmlData).find("errorCode").text();
+            var errDesc = $(xmlData).find("errorMessage").text();
+            if(errCode != "0"){
+                alert(errCode+"="+errDesc);
+            }else{
+                if(xmlStr != null){
+                    makeList(xmlData);
+                    listCnt = $(xmlData).find("totalCount").text();
+                    $("#totalCnt").text(listCnt);
+                    
+                    if(listCnt <= 10){
+                    	$('#btnGetNextAddr').hide();
+                    }else{
+                    	$('#btnGetNextAddr').show();        	
+                    }
+                }
+            }
+        }
+        ,error: function(xhr,status, error){
+            alert('에러발생');
+        }
+    });
+
+}
+
+
+function makeList(xmlStr){
+    var addressItem = ComUtils.loadTemplate("addressItem");
+    var htmlList = "";
+    var i = 0;
+    $(xmlStr).find("juso").each(function(){
+        htmlStr = addressItem;
+        htmlStr = htmlStr.replace('{seq}', i.toString());
+        htmlStr = htmlStr.replace('{seq}', i.toString());
+    	htmlStr = htmlStr.replace('{roadAddr}', $(this).find('roadAddr').text());
+        htmlStr = htmlStr.replace('{roadAddr}', $(this).find('roadAddr').text());
+        htmlStr = htmlStr.replace('{roadAddrPart1}', $(this).find('roadAddrPart1').text());
+        htmlStr = htmlStr.replace('{roadAddrPart1}', $(this).find('roadAddrPart1').text());
+        htmlStr = htmlStr.replace('{roadAddrPart2}', $(this).find('roadAddrPart2').text());
+        htmlStr = htmlStr.replace('{roadAddrPart2}', $(this).find('roadAddrPart2').text());
+        htmlStr = htmlStr.replace('{jibunAddr}', $(this).find('jibunAddr').text());
+        htmlStr = htmlStr.replace('{jibunAddr}', $(this).find('jibunAddr').text());
+        htmlStr = htmlStr.replace('{engAddr}', $(this).find('engAddr').text());
+        htmlStr = htmlStr.replace('{engAddr}', $(this).find('engAddr').text());
+        htmlStr = htmlStr.replace('{zipNo}', $(this).find('zipNo').text());
+        htmlStr = htmlStr.replace('{zipNo}', $(this).find('zipNo').text());
+        htmlStr = htmlStr.replace('{admCd}', $(this).find('admCd').text());
+        htmlStr = htmlStr.replace('{rnMgtSn}', $(this).find('rnMgtSn').text());
+        htmlStr = htmlStr.replace('{bdMgtSn}', $(this).find('bdMgtSn').text());
+        htmlStr = htmlStr.replace('{detBdNmList}', $(this).find('detBdNmList').text());
+        htmlStr = htmlStr.replace('{bdNm}', $(this).find('bdNm').text());
+        htmlStr = htmlStr.replace('{bdKdcd}', $(this).find('bdKdcd').text());
+        htmlStr = htmlStr.replace('{siNm}', $(this).find('siNm').text());
+        htmlStr = htmlStr.replace('{sggNm}', $(this).find('sggNm').text());
+        htmlStr = htmlStr.replace('{emdNm}', $(this).find('emdNm').text());
+        htmlStr = htmlStr.replace('{liNm}', $(this).find('liNm').text());
+        htmlStr = htmlStr.replace('{rn}', $(this).find('rn').text());
+        htmlStr = htmlStr.replace('{udrtYn}', $(this).find('udrtYn').text());
+        htmlStr = htmlStr.replace('{buldMnnm}', $(this).find('buldMnnm').text());
+        htmlStr = htmlStr.replace('{buldSlno}', $(this).find('buldSlno').text());
+        htmlStr = htmlStr.replace('{mtYn}', $(this).find('mtYn').text());
+        htmlStr = htmlStr.replace('{lnbrMnnm}', $(this).find('lnbrMnnm').text());
+        htmlStr = htmlStr.replace('{lnbrSlno}', $(this).find('lnbrSlno').text());
+        htmlStr = htmlStr.replace('{emdNo}', $(this).find('emdNo').text());
+        htmlList = htmlList + htmlStr;
+        i++;
+    });
+    $("#list").append(htmlList);
+}
+
+/*
+ * 주소를 선택한 경우.
+ */
+function setMaping(seq) {
+	var params = {};
+	params.zipNo         = $("input[name='zipNo']").eq(seq).val();         // 우편번호
+	params.roadAddrPart1 = $("input[name='roadAddrPart1']").eq(seq).val(); // 도로명주소(참고항목 제외)
+	params.roadAddrPart2 = $("input[name='roadAddrPart2']").eq(seq).val(); // 도로명주소
+	params.admCd         = $("input[name='admCd']").eq(seq).val();         // 행정구역코드
+	params.bdMgtSn       = $("input[name='bdMgtSn']").eq(seq).val();       // 건물관리번호
+
+	params.roadFullAddr  = $("input[name='roadFullAddr']").eq(seq).val();  // 전체 도로명주소
+	params.jibunAddr     = $("input[name='jibunAddr']").eq(seq).val();     // 지번주소
+	params.engAddr       = $("input[name='engAddr']").eq(seq).val();       // 도로명주소(영문)
+	params.rnMgtSn       = $("input[name='rnMgtSn']").eq(seq).val();       // 도로명코드
+	params.bdKdcd        = $("input[name='bdKdcd']").eq(seq).val();        // 공동주택여부(1 : 공동주택, 0 : 비공동주택)
+	params.siNm          = $("input[name='siNm']").eq(seq).val();          // 시도명
+	params.sggNm         = $("input[name='sggNm']").eq(seq).val();         // 시군구명
+	params.emdNm         = $("input[name='emdNm']").eq(seq).val();         // 읍면동명
+	params.rn            = $("input[name='rn']").eq(seq).val();            // 도로명
+	params.udrtYn        = $("input[name='udrtYn']").eq(seq).val();        // 지하여부(0 : 지상, 1 : 지하)
+	params.buldMnnm      = $("input[name='buldMnnm']").eq(seq).val();      //   건물본번
+	params.buldSlno      = $("input[name='buldSlno']").eq(seq).val();      //   건물부번
+	params.mtYn          = $("input[name='mtYn']").eq(seq).val();          // 산여부(0 : 대지, 1 : 산)
+	params.lnbrMnnm      = $("input[name='lnbrMnnm']").eq(seq).val();      //   지번본번(번지)
+	params.lnbrSlno      = $("input[name='lnbrSlno']").eq(seq).val();      //   지번부번(호)
+	params.emdNo         = $("input[name='emdNo']").eq(seq).val();         // 읍면동일련번호
+	params.addrDetail    = '';
+
+	localStorage.setItem("imsmm.address", JSON.stringify(params));
+	showJusoPopup(0);
+	/* goPhc(); */
+}
+
+function goPhc(){
+		ComUtils.redirect('/phc/epq/', {});
+}
+
+//특수문자, 특정문자열(sql예약어의 앞뒤공백포함) 제거
+function checkSearchedWord(str){
+    if(str.length >0){
+        //특수문자 제거
+        var expText = /[%=><]/ ;
+        if(expText.test(str) == true){
+            ComUtils.alert('알림','특수문자를 입력 할수 없습니다.') ;
+            str = str.split(expText).join("");
+            return false;
+        }
+
+        //특정문자열(sql예약어의 앞뒤공백포함) 제거
+        var sqlArray = new Array(
+            //sql 예약어
+            "OR", "SELECT", "INSERT", "DELETE", "UPDATE", "CREATE", "DROP", "EXEC",
+                     "UNION",  "FETCH", "DECLARE", "TRUNCATE"
+        );
+
+        var regex;
+        for(var i=0; i<sqlArray.length; i++){
+            regex = new RegExp( sqlArray[i] ,"gi") ;
+
+            if (regex.test(str) ) {
+            	ComUtils.alert('알림', "\"" + sqlArray[i]+'\"와(과) 같은 특정문자로 검색할 수 없습니다.');
+                str = str.replace(regex, "");
+                return false;
+            }
+        }
+    }
+    return true ;
+}
+</script>
+
+			</div>
+		</div>
+		
+<script>
+var GV_USER_TIMEZONE = 'GMT+09:00';
+var GV_DATE_FORMAT = 'YYYY-MM-DD';
+var GV_THOUSAND_SPRAT = ",";
+$(function(){
+	showJusoPopup(0);
+	
+    
+	$('.step-lang__btn').click(function(){
+		if ('ko' == this.value) {
+			$('.step-lang__anchor').data('plugin_uiToggle').close();
+		} else {
+			var insttId = ComUtils.getValue('insttid').endsWith('A')  ? ComUtils.getValue('insttid').substr(0,8) : ComUtils.getValue('insttid');
+			ComUtils.redirect('/phc/language.do', {instt: insttId, lang: this.value, detail:'epq'});
+		}
+	});
+	
+	
+	$('[name=testPurpose]').click(function(){
+		if(ComUtils.getValue('testPurpose') == "79"){
+			$('#personalType').show();
+		}else{
+			$('#personalType').hide();
+		}
+	});
+	
+	
+	$('[name=sexdstnCd]').click(function(){
+		if(TimeUtils.dateConverter(Date.now(), 'YYYY') - $('#birthday').val().toString().substring(0, 4) > 12){
+			if($('[name=sexdstnCd]:checked').val() === "1"){
+				$('#pregDom').hide();
+			}else{
+				$('#pregDom').show();
+			}
+		}else{
+			$('#pregDom').hide();
+		}
+	});
+	
+	
+    var replaceChar = /[~!@\#$%^&*\()\-=+_'\;<>0-9\/.\`:\"\\,\[\]?|{}]/gi;
+    var replaceNotFullKorean = /[ㄱ-ㅎㅏ-ㅣ]/gi;
+    
+    $("#name").on("focusout", function() {
+        var x = $(this).val();
+        if (x.length > 0) {
+            if (x.match(replaceChar) || x.match(replaceNotFullKorean)) {
+                x = x.replace(replaceChar, "").replace(replaceNotFullKorean, "");
+            }
+            $(this).val(x);
+        }
+        }).on("keyup", function() {
+            $(this).val($(this).val().replace(replaceChar, ""));
+
+   });   
+	
+	
+	$('#personalCheck').click(function(){
+		if($('#personalCheck')[0].checked){	
+			$('#personalId').prop('disabled', true);
+			$('#personalId').prop('hidden', true);
+			$('#personalId').val('');
+			$('#birthday').val('');
+		}else{
+			$('#personalId').prop('disabled', false);
+			$('#personalId').prop('hidden', false);
+		}
+	});
+	
+	
+	$('#personalId').on('keydown focusout', function(e){
+		var personalId = this.value.replaceAll('-', '');
+		if(e.keyCode===undefined || (e.keyCode >= 48 && personalId.length > 5)) {
+			var yymmdd = personalId.substr(0,6);
+			if(yymmdd.length==6) {
+				this.value = yymmdd + '-' + personalId.substr(6);
+			}
+			if(personalId.length > 6) {
+				var ch = personalId.charAt(6);
+				$('#birthday').val(('1256'.indexOf(ch) > -1 ? '19' : '20')+yymmdd);
+				$('[name=sexdstnCd][value="'+(ch % 2 == 0 ? '2' : '1')+'"]').prop('checked', true);
+				if(ch%2 == 0){
+					$('#pregDom').show();
+				}else{
+					$('#pregDom').hide();
+				}
+				
+			}
+		} else if(personalId.length < 8) {
+			$('#birthday').val('');
+		}
+	});
+	
+	
+	$('#btnZipCode').on('click', function() {
+		
+		showJusoPopup(1);
+		
+		
+		/* var params = ComUtils.getParams('form');
+		localStorage.setItem('imsmm.selfcheckInfo', JSON.stringify(params));
+		ComUtils.redirect('/phc/juso', {}); */
+	});
+	
+	$('section:eq(0) .cta--confirm').click(function(){
+		if(validateForm(1) == 0) {
+			$('[data-js="step-section"]').data('plugin_uiStep').next();
+			checkTestPurpose();
+		}
+	});
+	
+	$('.text_body_temp').on('keydown focusout', function(e) {
+    	if(!ComUtils.isEmpty(this.value)){
+    		$('#checkFeverUnknown').prop('checked', false);
+    	}
+	});
+	
+	$('[name=symptomsCd]').click(function(){
+		var $sym = $(this);
+		if($sym.val()=='999' && $sym.is(':checked')) {
+			$('[name=symptomsCd][value!=999]').prop('checked', false);
+		} else {
+			$('[name=symptomsCd][value=999]').prop('checked', false);
+		}
+		
+		if($('[name=symptomsCd]:checked').val() === undefined){
+			$('#symptomsDtDom')[0].hidden = true;
+			$('#symptomsDt')[0].placeholder = "YYYYMMDD";
+			$('#symptomsDt').val(TimeUtils.dateConverter(Date.now(), "YYYYMMDD"));
+			$('#symptomsDt')[0].disabled = false;
+		}else{
+			$('#symptomsDtDom')[0].hidden = false;
+			if($sym.val() ==='999'){
+				$('#symptomsDtDom')[0].hidden = true;
+				$('#symptomsDt')[0].disabled = true;
+				$('#symptomsDt').val(TimeUtils.dateConverter(Date.now(), "00000000"));
+			} else{
+				$('#symptomsDt')[0].placeholder = "YYYYMMDD";
+				$('#symptomsDt').val(TimeUtils.dateConverter(Date.now(), "YYYYMMDD"));
+				$('#symptomsDt')[0].disabled = false;
+			}
+		}
+	});
+	
+	$('section:eq(1) .cta--cancel').click(function(){
+		$('[data-js="step-section"]').data('plugin_uiStep').prev();
+	});
+	
+	$('section:eq(1) .cta--confirm').click(function(){
+		if(validateForm(2) == 0) {
+			var params = ComUtils.getParams('form');
+			params.personalId = params.personalId.replaceAll('-', '');
+			params.countryCd = params.foreignerYn=='N' ? 'KR' : params.countryCd;
+			params.countryNm = params.foreignerYn=='N' ? '대한민국' : $('#ul_country button[value="'+params.countryCd+'"]').data('regionName');
+			params.patntAge = ComUtils.getPatntAge(params.birthday);
+			params.patntRdnmadrDtl = params.roadAddrPart2 + ' ' + params.patntRdnmadrDtl;
+			
+			params.feverTemperature = (params.feverYn == 'Y' && !$('#checkFeverUnknown').is(':checked') ? ''+params.feverTemperature : '');
+			params.heatDuration = (params.feverYn == 'Y' ? ''+params.heatDuration : '');
+			params.outbreakArea = params.outbreakAreaVisitYn == 'Y' ? params.outbreakArea : '';
+			params.travelCountries = params.travelYn == 'Y' ? params.travelCountries : '';
+			params.travelEnterDt = params.travelYn == 'Y' ? params.travelEnterDt : '';
+			params.suspiciousContactNm = params.suspiciousContactYn == 'Y' ? params.suspiciousContactNm : '';
+			
+			params.registerId = ComUtils.getValue('registerId');
+			
+			params.personalCheck = (params.personalCheck == "on" ? 'Y' : 'N'); 
+			params.pregStCd = (params.pregStCd == "1"? 'Y':'N');
+			params.trgetSn = params.testPurpose == "79" ? params.trgetSn : null;
+			/* params.personalTypeBox = (params.testPurpose == '79' ? 0 : 0); */ 
+			
+			params.patntAreaCtprvnCd = params.patntEmdCd.substr(0,2); 
+			params.patntAreaSignguCd = params.patntEmdCd.substr(1,3);
+			
+			params.registTy = $('#registerId').val() == 'SYSTEM' ? 'm' : 'w';
+			params.registerId = $('#registerId').val() == 'SYSTEM' ? 'SYSTEM' : $('#registerId').val();  
+			
+			params.registSe = 'SC';
+
+			var smptm = '', smptmStr = '';
+			$('[name=symptomsCd]:checked').each(function(i, item) {
+				smptm += (i > 0 ? ',' : '') + item.value;
+				smptmStr += (i > 0 ? ',' : '') + item.dataset.val;
+			});
+			params.smptmAt = smptm == '999' ? 'N' : 'Y';
+			params.symptomsCd = smptm == '999' ? '' : smptm;
+			params.symptomsCdStr = smptm == '999' ? '' : smptmStr;
+
+			$('.c-modal__wrap').css('min-height', '340px');
+			ComUtils.confirm('제출 후 선택한 선별진료소를 방문 후,<br>신분증 제출시 전자문진표 제출하셨다고 말씀해 주십시오.<br><br>보다 신속한 검사를 받으실 수 있습니다.<br>제출 후 24시간안에 선별진료소를 방문하여 주십시오.', '제출하시겠습니까?', function(){
+				ComUtils.callAjax('/phc/save.do', params, function(resp){
+			   		if (resp.result == 'T') {
+			   			localStorage.removeItem('imsmm.selfcheckInfo');
+			   			localStorage.removeItem('imsmm.address');
+			   			/* localStorage.removeItem('imsmm.piTarget'); */
+			   			ComUtils.alert('제출되었습니다<br>반드시 24시간 안에 선별진료소를 방문해주세요', '알림', function(){ 
+			   				ComUtils.redirect('/phc/'+params.insttid);
+		   				});
+			   	 	} else if (resp.result == 'F') { 
+			   	 		if(!ComUtils.isEmpty(resp.data)){
+				   	 		$('#'+resp.data).closest('.t-form__row').find('.sec-header').addClass('is-error');
+					   	 	$('#modal_alert').data('plugin_modal').onAfterClose = function() {
+					 		   FES.MD.DELAY_FUNC(function() {
+					 		      $(window).scrollTop($('.is-error:eq(0)').offset().top);
+					 		      $('#modal_alert').data('plugin_modal').onAfterClose = function(){};
+					 		   }, 100);
+					 		};
+					 		var msg = $('.is-error:eq(0)').find('h2').text()+'을(를) 확인하세요.';
+					 		$('.c-modal__wrap').css('min-height', '');
+					 		ComUtils.alert(msg, '알림');
+			   	 		} else {
+				   	 		ComUtils.alert('죄송합니다. 저장 실패하였습니다.<br>잠시 후 다시 시도해 주십시오.<br>같은 증상이 계속되는 경우 선별진료소로 연락 바랍니다.', '알림');
+			   	 		}
+			   	 	} else {
+			   	 		ComUtils.alert('죄송합니다. 저장 실패하였습니다.<br>잠시 후 다시 시도해 주십시오.<br>같은 증상이 계속되는 경우 선별진료소로 연락 바랍니다.', '알림');
+			   	 	}
+				});	
+			});
+		}
+	});
+	
+	
+	
+	var selfcheckInfo = JSON.parse(localStorage.getItem('imsmm.selfcheckInfo'));
+	var selectedPersonalType = null;
+	/* if (selfcheckInfo != null) {
+		ComUtils.setDataMapping('form', selfcheckInfo);
+		selectedPersonalType = selfcheckInfo.personalTypeBox;
+		if (selfcheckInfo.foreignerYn === 'Y') {
+			var $styleCombobox = $('[data-js="toggle-select"]');
+			$('[data-target="rdo-panel__out"]').click();
+			$('[data-id="rdo-panel__out"]').addClass('is-active');
+			$styleCombobox.data('plugin_styleCombobox').update();
+		}
+		
+		if(selfcheckInfo.testPurpose == "79"){
+			$('#testPurpose_10').click();
+		}
+		
+		if(selfcheckInfo.personalCheck == "on"){
+			$('#personalId').prop('disabled', true);
+			$('#personalId').prop('hidden', true);
+		}else{
+			$('#personalId').prop('disabled', false);
+			$('#personalId').prop('hidden', false);
+		}
+	} */
+	
+	var address = JSON.parse(localStorage.getItem('imsmm.address'));
+	if (address != null) {
+		fnRetNewPostSetN_jusoro(address);
+		showJusoPopup(0);
+	}
+	
+	piTargetTy();
+	
+	/* var piTarget = JSON.parse(localStorage.getItem('imsmm.piTarget'));
+	if(piTarget == null){
+		var params = {};
+		ComUtils.callAjax('/getInsTypeList.do', params, function(resp){
+			if(resp.result == 'T'){
+				piTarget = resp.data;
+				localStorage.setItem('imsmm.piTarget', JSON.stringify(resp.data));
+				setPersonalTypeBox(piTarget, selectedPersonalType);
+			}
+		});
+	}else
+	{
+		setPersonalTypeBox(piTarget, selectedPersonalType);	
+	} */
+	
+	if($('[name=symptomsCd]').val() == "999"){
+		ComUtils.setValue('symptomsDt', "00000000");
+	}
+	
+	
+});
+
+function showPPLayer(isShow){
+	if(isShow)
+		$("#ppLayerPop").show();
+	else
+		$("#ppLayerPop").hide();
+		
+}
+
+function showJusoPopup(isShow){
+	if(isShow){
+		$("#jusoModalPop").show();
+		$('body').addClass('modal-open');
+	}else{
+		$("#jusoModalPop").hide();
+		$('body').removeClass('modal-open');
+		
+		var address = JSON.parse(localStorage.getItem('imsmm.address'));
+		if (address != null) {
+			fnRetNewPostSetN_jusoro(address);
+		}
+	}	
+}
+
+
+function checkTestPurpose(){
+	var purpose = ComUtils.getValue('testPurpose');
+	if(purpose == "10"){
+		initializeSubItem();
+		$('#travelYn_Y').click();
+		$('[name=travelYn]').prop("disabled", true);
+	}else if(purpose == "50"){
+		initializeSubItem();
+		$('#outbreakAreaVisitYn_Y').click();
+		$('[name=outbreakAreaVisitYn]').prop("disabled", true);
+	}else if(purpose == "60" || purpose=="20"){
+		initializeSubItem();
+		$('#suspiciousContactYn_Y').click();
+		$('[name=suspiciousContactYn]').prop("disabled", true);
+	}else{
+		initializeSubItem();
+	}
+}
+
+
+function initializeSubItem(){
+	$('#travelYn_N').click();
+	$('#suspiciousContactYn_N').click();
+	$('#outbreakAreaVisitYn_N').click();	
+	
+	$('[name=travelYn]').prop("disabled", false);
+	$('[name=outbreakAreaVisitYn]').prop("disabled", false);
+	$('[name=suspiciousContactYn]').prop("disabled", false);
+}
+
+function fnRetNewPostSetN_jusoro(data) {
+	$('#patntRnZip').val(data.zipNo);
+	$('#patntRdnmadr').val(data.roadAddrPart1);
+	$('#patntRdnmadrDtl').val('').focus();
+	$('#patntEmdCd').val(data.admCd);
+	$('#patntBuldManageno').val(data.bdMgtSn);
+	$('#roadAddrPart2').val(data.roadAddrPart2);
+}
+
+
+function piTargetTy(){
+	var params = {
+			
+	}
+	
+	ComUtils.callAjax('/getInsTypeList.do', params, function(resp){
+		if(resp.result == 'T'){
+			
+			for(var i = 0; i < resp.data.length; i++){
+				var data = resp.data[i];
+				var op = $("<option value='" + data["trgetSn"] + "'>" + data["trgetTyNm"] + "</option>");  
+				$("#trgetSn").append(op);
+			}
+		}
+	});
+}
+
+
+function validateForm(step) {
+	$('.is-error').removeClass('is-error');
+	var format_yyyymmdd = /^(19[0-9][0-9]|20\d{2})(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])$/;	
+	var format_symptomsdt = /^([0-2][0-9][0-9][0-9])(0[0-9]|1[0-2])(0[0-9]|[1-2][0-9]|3[0-1])$/;
+	var birthDay = ComUtils.getValue('birthday');
+	var personalId = ComUtils.getValue('personalId');
+	var symptomsDt = ComUtils.getValue('symptomsDt');
+	
+	
+	if(step == 1) {
+		$('section:eq(0) [data-checkRequired]').each(function(i, item) {
+			
+			if (ComUtils.isEmpty(ComUtils.getValue(item))) {
+				if(item.id === "personalId"){
+					if($('#presonalCheck') == false){
+						$(item).closest('.t-form__row').find('.sec-header').addClass('is-error');
+					}
+				}else{
+					$(item).closest('.t-form__row').find('.sec-header').addClass('is-error');
+				}
+			}
+		});
+		
+		if(ComUtils.getValue('personalCheck') == ''){
+			if($('#personalId').val().substring(7,8) % 2 != ComUtils.getValue('sexdstnCd') % 2){
+				$('[name="sexdstnCd"]').closest('.t-form__row').find('.sec-header').addClass('is-error');
+			}
+
+			if(ComUtils.getValue('foreignerYn') == 'Y') {
+				if($('#personalId').val().substring(7,8) < 5){
+				$('#personalId').closest('.t-form__row').find('.sec-header').addClass('is-error');
+			}
+			}else if(ComUtils.getValue('foreignerYn') == 'N'){
+				if($('#personalId').val().substring(7,8) > 4){
+				$('#personalId').closest('.t-form__row').find('.sec-header').addClass('is-error');
+			}
+		}
+		}
+		
+		
+		if(personalId.substring(7, 8) == "3" || personalId.substring(7, 8) == "4" ){
+			personalId = "20" + personalId.substring(0, 6);
+		} else {
+			personalId = "19" + personalId.substring(0, 6);
+		}
+		
+		
+		if($('#personalCheck')[0].checked == false && (TimeUtils.dateConverter(personalId) < TimeUtils.dateConverter("20201000"))){
+			if(ComUtils.getValue('foreignerYn') == 'N') {
+				
+				if(!ComUtils.isPersonalNumber(ComUtils.getValue('personalId').replaceAll('-', ''))) {
+					$('#personalId').closest('.t-form__row').find('.sec-header').addClass('is-error');
+				}
+			} else {
+				
+				if(ComUtils.getValue('personalId').replaceAll('-', '').length != 13) {
+					$('#personalId').closest('.t-form__row').find('.sec-header').addClass('is-error');
+				}
+				if(ComUtils.getValue('countryCd').length == 0) {
+					$('#countryCd').closest('.t-form__row').find('.sec-header').addClass('is-error');
+				}
+			}
+		}else if((TimeUtils.dateConverter(personalId) > TimeUtils.dateConverter(Date.now()))){
+			$('#personalId').closest('.t-form__row').find('.sec-header').addClass('is-error');
+		}
+		
+		
+		
+		if(!format_yyyymmdd.test($('#birthday').val()) || (TimeUtils.dateConverter($('#birthday').val()) > TimeUtils.dateConverter(Date.now()))){
+			 $('#birthday').closest('.t-form__row').find('.sec-header').addClass('is-error');
+		}
+		
+		if(ComUtils.getValue('mobile').replace(/-/gi, '').length < 10 
+				|| '010 011 016 017 019'.indexOf(ComUtils.getValue('mobile').substring(0, 3)) == -1) {
+			$('#mobile').closest('.t-form__row').find('.sec-header').addClass('is-error');
+		}
+		
+		if(ComUtils.getValue('patntRnZip').length > 0 && ComUtils.getValue('patntRdnmadrDtl').length == 0) {
+			$('#patntRdnmadrDtl').closest('.t-form__row').find('.sec-header').addClass('is-error');
+		}
+		
+		if(ComUtils.getValue('patntOccpCd') != 'B' && ComUtils.getValue('patntOccpCd') != 'D'
+				&& ComUtils.getValue('occpDtlInfo') == '') {
+			$('#occpDtlInfo').closest('.t-form__row').find('.sec-header').addClass('is-error');
+		}
+	} else {
+		
+		if(ComUtils.getValue('feverYn') == 'Y' 
+				&& !((ComUtils.getValue('feverTemperature') >= 35 && ComUtils.getValue('feverTemperature') <= 43) 
+						|| $('#checkFeverUnknown').is(':checked'))) {
+			$('#feverTemperature').closest('.t-form__row').find('.sec-header').addClass('is-error');
+		}
+		
+		if($('[name=symptomsCd]:checked').length == 0) {
+			$('[name=symptomsCd]').closest('.t-form__row').find('.sec-header').addClass('is-error');
+		}
+		
+		
+		if(!format_symptomsdt.test(symptomsDt)){
+			$('#symptomsDt').closest('.t-form__row').find('.sec-header').addClass('is-error');
+		}
+		
+		
+		if(ComUtils.getValue('suspiciousContactYn') == 'Y' && ComUtils.getValue('suspiciousContactNm').length == 0) {
+			$('#suspiciousContactNm').closest('.t-form__row').find('.sec-header').addClass('is-error');
+		}
+		
+		if(ComUtils.getValue('outbreakAreaVisitYn') == 'Y' && ComUtils.getValue('outbreakArea').length == 0) {
+			$('#outbreakArea').closest('.t-form__row').find('.sec-header').addClass('is-error');
+		}
+		
+		if(ComUtils.getValue('travelYn') == 'Y' && ComUtils.getValue('travelCountries').length == 0) {
+			$('#travelCountries').closest('.t-form__row').find('.sec-header').addClass('is-error');
+		}
+		
+		if(ComUtils.getValue('travelYn') == 'Y' 
+				&& (ComUtils.getValue('travelEnterDt').length == 0 || !format_yyyymmdd.test(ComUtils.getValue('travelEnterDt')))) {
+			$('#travelEnterDt').closest('.t-form__row').find('.sec-header').addClass('is-error');
+		}
+		
+		
+		if (ComUtils.isEmpty(ComUtils.getValue('chk_agree'))) {
+			$('#chk_agree').closest('.t-form__row').find('.sec-header').addClass('is-error');
+		}
+	}
+	
+	if($('.is-error:eq(0)').length > 0) {
+		var $errorItem = $('.is-error:eq(0)').parent().find('input:first');
+		if($errorItem.attr('id') === 'occpDtlInfo' && ComUtils.getValue('patntOccpCd').length == 0) {
+			$errorItem = $('#patntOccpCd');	
+		} else if($errorItem.attr('id') === 'patntRnZip' && ComUtils.getValue('patntRnZip').length > 0 && ComUtils.getValue('patntRdnmadrDtl').length == 0) {
+			$errorItem = $('#patntRdnmadrDtl'); 
+		}
+		var msg = !ComUtils.isEmpty($errorItem.attr('placeholder')) && $errorItem.attr('placeholder') != 'YYYYMMDD' ? $errorItem.attr('placeholder')
+				: $('.is-error:eq(0)').find('h2').text()+'을(를) 확인하세요.';
+		if($errorItem.attr('id') === 'feverTemperature'){
+			msg = '발열온도를 35.0 ~ 43.0 까지 입력 해주세요.';
+		} else if($errorItem.attr('name') === 'sexdstnCd'){
+			msg = '성별을 확인하세요 ';
+		}
+		
+		$('#modal_alert').data('plugin_modal').onAfterClose = function() {
+		   FES.MD.DELAY_FUNC(function() {
+		      $(window).scrollTop($('.is-error:eq(0)').offset().top);
+		      $('#modal_alert').data('plugin_modal').onAfterClose = function(){};
+		   }, 100);
+		};
+		
+		ComUtils.alert(msg, '알림', function(){
+			$errorItem.focus();
+		});
+	}
+	
+	
+	return $('.is-error').length;
+}
+</script>
+	    
+
+
+
+
+
+
+
+
+
+
+
+<section id="modal_alert" class="c-modal c-modal--alert c-modal--sizeM has-button" role="dialog" aria-labelledby="modal_alert__title">
+    <div class="c-modal__wrap" role="document" tabindex="-1">
+        <header class="c-modal__head">
+            <h2 class="c-modal__title" id="modal_alert__title">알림</h2>
+        </header>
+        <div class="c-modal__body">
+            <div class="c-modal__scroll">
+                <div class="c-modal__content">
+                    <p class="alert-msg">주민/외국인등록번호을(를) 확인하세요.</p>
+                </div>
+            </div>
+        </div>
+        <div class="c-modal__foot o-cta-wrap">
+            <button type="button" data-dismiss="confirm" class="cta cta--modal c-modal__button cta--confirm"> 확인 </button>
+        </div>
+        <button type="button" class="c-modal__close" data-dismiss="cancel"><span class="screen--out">close</span></button>
+    </div>
+</section>
+
+
+<section id="modal_confirm" class="c-modal c-modal--alert c-modal--sizeM has-button" role="dialog" aria-labelledby="modal_alert__title">
+    <div class="c-modal__wrap" role="document" tabindex="-1">
+        <header class="c-modal__head">
+            <h2 class="c-modal__title" id="modal_confirm__title"></h2>
+        </header>
+        <div class="c-modal__body">
+            <div class="c-modal__scroll">
+                <div class="c-modal__content">
+                    <p class="alert-msg"></p>
+                </div>
+            </div>
+        </div>
+        <div class="c-modal__foot o-cta-wrap">
+            <button type="button" data-dismiss="confirm" class="cta cta--modal c-modal__button cta--confirm"> 확인 </button>
+            <button type="button" data-dismiss="cancel" class="cta cta--modal c-modal__button cta--cancel"> 취소 </button>
+        </div>
+        <button type="button" class="c-modal__close" data-dismiss="cancel"><span class="screen--out">close</span></button>
+    </div>
+</section>
+
+
+	
+</body></html>
