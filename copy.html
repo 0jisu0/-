@@ -30,7 +30,7 @@
 <script src="./static/js/front/vendor/modal.js"></script>
 <script src="./static/js/front/vendor/step-section.js"></script>
 <script src="./static/js/front/visitor.js"></script>
-<script src="./static/js/common.js"></script>
+<script src="./static/js/common.js?v=1629875972305"></script>
 </head>
 
 
@@ -81,7 +81,7 @@
                         </ol>
                     </div>
                     <div class="step-content" style="width: 751px;">
-                        <div class="step-panels" data-js="step-section__content" >
+                        <div class="step-panels" data-js="step-section__content" style="">
                             <section class="step-panels__panel is-active" data-js="step-section__panel" data-panel-label="전자문진표 작성" style="width: 751px;">
                                 <div class="t-form">
                                     <div class="t-form__row">
@@ -1763,25 +1763,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="t-form__row"><!-- 정책 동의 -->
-                                        <div class="sec-header"></div>
-                                        <div class="t-form__flex">
-                                            <div class="o-checkbox-wrap">
-                                                <div class="o-checkbox">
-                                                    <input type="checkbox" id="chk_agree" value="Y" placeholder="개인정보 수집 동의는 필수입니다." data-checkrequired="">
-                                                    <label for="chk_agree"><span>개인정보 수집 동의 <a href="javascript:showPPLayer(1);">[개인정보취급방침]</a></span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="step-panels__fotter">
-                                    <div class="cta-wrap">
-                                        <div class="cta-wrap__col">
-                                            <button type="button" data-js="step-next" class="cta cta--confirm"> 다음  </button>
-                                        </div>
-                                    </div>
-                                </div>
+                                   
 
 
 
@@ -1796,7 +1778,24 @@
 
 
 
-                            <div class="t-form">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </section>
+                            <section class="step-panels__panel" data-js="step-section__panel" data-panel-label="전자문진표 작성" style="width: 751px;">
+                                <div class="t-form">
                                     <div class="t-form__row"><!-- 질병 -->
                                         <div class="sec-header">
                                             <h2>의심 감염병을 선택해주세요.</h2><span class="required">*</span>
@@ -2077,9 +2076,19 @@
                                 </div>
                                 <div class="step-panels__fotter">
                                     <div class="cta-wrap">
-                                        <div class="cta-wrap__col">
-                                            <button type="button" data-js="step-prev" class="cta cta--cancel"> 이전</button>
+                                        <div class="t-form__row"><!-- 정책 동의 -->
+                                            <div class="sec-header"></div>
+                                            <div class="t-form__flex">
+                                                <div class="o-checkbox-wrap">
+                                                    <div class="o-checkbox">
+                                                        <input type="checkbox" id="chk_agree" value="Y" placeholder="개인정보 수집 동의는 필수입니다." data-checkrequired="">
+                                                        <label for="chk_agree"><span>개인정보 수집 동의 <a href="javascript:showPPLayer(1);">[개인정보취급방침]</a></span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </div>
+                                   
                                         <div class="cta-wrap__col">
                                             <button type="button" data-js="step-next" class="cta cta--confirm"> 제출하기 </button>
                                         </div>
@@ -2090,7 +2099,7 @@
                     </div>
                 </div>
                 <input type="hidden" id="insttid" value="11700165A">
-                <input type="hidden" id="insttnm" value="서울특별시동대문구보건소">
+                <input type="hidden" id="insttnm" value="서울특별시사당역임시선별검사소">
                 <input type="hidden" id="ctprvnCd" value="01">
                 <input type="hidden" id="registerId" value="SYSTEM">
             </main>
@@ -2205,21 +2214,7 @@
     
     
     
-                        <!--  -->
-    
-                        <div class="section addr-info white" id="addrInfo">
-                            <div class="add-info-txt">
-                                보다 정확한 검색을 위하여 다음 권장 사항을 확인하여 주시기 바랍니다.
-                            </div>
-    
-                            <div class="add-info-ex">
-                                
-                                <dl>
-                                    <dt>시, 도 / 시, 군, 구 / + 건물명</dt>
-                                    <dd>예 ) 종로구 사직로 161</dd>
-                                </dl>
-                            </div>
-                        </div>
+                        
     
                         <!--  -->
                         <div class="section addr-body white" id="addrList">
@@ -3036,9 +3031,15 @@
             </div>
             <button type="button" class="c-modal__close" data-dismiss="cancel"><span class="screen--out">close</span></button>
         </div>
+
+
+
+
+
+
+
     </section>
-    
-    
+
         
     </body>
 
